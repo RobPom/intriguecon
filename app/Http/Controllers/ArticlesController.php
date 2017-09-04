@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Article;
@@ -64,7 +65,6 @@ class ArticlesController extends Controller
             $fileNameToStore = $filename.'_'.time(). '.' .$extention;
             //upload Image
             $path = $request->file('article_image')->storeAs('public/article_images', $fileNameToStore );
-
         } else {
              //change this to not use image if not saved
             $fileNameToStore = 'noimage.jpg';
@@ -76,9 +76,8 @@ class ArticlesController extends Controller
         $article->title = $request->input('title');
         $article->body = $request->input('body');
         $article->user_id = auth()->user()->id;
-       // $article->article_image = $fileNameToStore;
+        $article->article_image = $fileNameToStore;
         $article->save();
-
         return redirect('/articles')->with('success', 'Article Created');
     }
 
@@ -148,8 +147,9 @@ class ArticlesController extends Controller
         $article = Article::find($id);
         $article->title = $request->input('title');
         $article->body = $request->input('body');
-        //$article->user_id = auth()->user()->id;
-       // $article->article_image = $fileNameToStore;
+        if($request->hasFile('article_image')){
+            $article->article_image = $fileNameToStore;
+        }
         $article->save();
 
         return redirect('/articles/'. $article->id)->with('success', 'Article Updated');
@@ -169,12 +169,12 @@ class ArticlesController extends Controller
         if(auth()->user()->id !== $article->user_id){
             return redirect('articles/'.$id)->with('error' , 'Unauthorized Page');
         }
-        /*  
+        
         //delete image
         if($article->cover_image != 'noimage.jpg'){
             Storage::delete('public/article_images/' . $article->article_image);
         } 
-        */
+        
         
         $article->delete();
         return redirect('/articles')->with('success', 'Article Removed');

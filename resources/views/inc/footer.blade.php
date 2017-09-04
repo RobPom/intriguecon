@@ -10,7 +10,7 @@
             
             </div>
             <div class="col-sm-4">
-                <a href="#">About Us</a><br>
+                <a href="/about">About Us</a><br>
                 <a href="#">Code of Conduct</a>
             </div>
         </div>
