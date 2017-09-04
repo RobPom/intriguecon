@@ -1,12 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Article;
 
+
 class ArticlesController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+     public function __construct()
+     {
+         $this->middleware('admin', ['except' => ['index', 'show']]);
+     }
+     
     /**
      * Display a listing of the resource.
      *
@@ -92,6 +103,11 @@ class ArticlesController extends Controller
     public function edit($id)
     {
         $article = Article::find($id);
+
+        //check for correct user
+        if(auth()->user()->id !== $article->user_id){
+            return redirect('articles/'.$id)->with('error' , 'Unauthorized Page');
+        }
         return view('articles.edit')->with('article' , $article);
     }
 
@@ -148,21 +164,20 @@ class ArticlesController extends Controller
     public function destroy($id)
     {
         $article = Article::find($id);
-        
-                //check for correct user
-               /*  
-               if(auth()->user()->id !== $article->user_id){
-                    return redirect('/articles')->with('error', 'Unauthorized Page');
-                } 
 
-               //delete image
-                if($article->cover_image != 'noimage.jpg'){
-                    Storage::delete('public/article_images/' . $article->article_image);
-                } 
-                */
-                
-                $article->delete();
-                return redirect('/articles')->with('success', 'Article Removed');
+        //check for correct user
+        if(auth()->user()->id !== $article->user_id){
+            return redirect('articles/'.$id)->with('error' , 'Unauthorized Page');
+        }
+        /*  
+        //delete image
+        if($article->cover_image != 'noimage.jpg'){
+            Storage::delete('public/article_images/' . $article->article_image);
+        } 
+        */
+        
+        $article->delete();
+        return redirect('/articles')->with('success', 'Article Removed');
     }
 }
 

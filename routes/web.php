@@ -12,10 +12,14 @@
 */
 
 Route::get('/', 'PagesController@index');
+Route::get('/home', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
 
 Route::resource('articles', 'ArticlesController');
 Route::resource('games', 'GamesController');
 Auth::routes();
+Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
+    return "this page requires that you be logged in and an Admin";
+}]);
 
 Route::get('/dashboard', 'DashboardController@index');

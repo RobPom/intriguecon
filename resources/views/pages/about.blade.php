@@ -3,4 +3,5 @@
 @section('content')
 <h1>{{$title}}</h1>
 <p>This the about page</p>
+
 @endsection

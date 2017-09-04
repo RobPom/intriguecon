@@ -14,15 +14,18 @@
         <i class="material-icons" style="vertical-align: middle;">keyboard_arrow_left</i>
         </a></span>
     
-    <div class="pull-right">
-        <a href="/articles/{{$article->id}}/edit" class="btn btn-default btn-sm" style="margin-bottom:6px;">
-                <i class="material-icons" style="vertical-align: middle;">mode_edit</i>
-        </a>
+    @if(!Auth::guest())
+        @if(Auth::user()->id == $article->user_id)
+            <div class="pull-right">
+                <a href="/articles/{{$article->id}}/edit" class="btn btn-default btn-sm" style="margin-bottom:6px;">
+                        <i class="material-icons" style="vertical-align: middle;">mode_edit</i>
+                </a>
 
-        {!!Form::open(['action' => ['ArticlesController@destroy', $article->id], 'method' => 'POST', 'style' => 'display:inline;' ])!!}
-            {{Form::hidden('_method', 'DELETE')}}
-            {{Form::button("<i class='material-icons' style='vertical-align: middle;'>delete</i>", ['type' => 'submit', 'style' => 'margin-bottom:6px;', 'class' => 'btn btn-danger btn-sm'])}}
-        {!!Form::close()!!}
-
+            {!!Form::open(['action' => ['ArticlesController@destroy', $article->id], 'method' => 'POST', 'style' => 'display:inline;' ])!!}
+                {{Form::hidden('_method', 'DELETE')}}
+                {{Form::button("<i class='material-icons' style='vertical-align: middle;'>delete</i>", ['type' => 'submit', 'style' => 'margin-bottom:6px;', 'class' => 'btn btn-danger btn-sm'])}}
+            {!!Form::close()!!}
+        @endif
+    @endif
     </div>
 @endsection
