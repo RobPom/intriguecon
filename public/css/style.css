@@ -1,0 +1,32 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  body {
+    /* Margin bottom by footer height */
+    margin-bottom: 160px;
+
+  }
+  .footer {
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 160px;
+    background-color: #333;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .yellow {color: yellow;}
+  .white {color:white;}
+
+  a.navbar-brand{
+    font-size: 22px;
+    padding: 12px 0 0 20px;
+  }
