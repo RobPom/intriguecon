@@ -11,7 +11,7 @@
             @endif
         @endif
     </h1>
-    <h4><small>{{count(App\Article::all())}} articles in library</small></h4>
+    <p>All of our articles. {{count(App\Article::all())}} in total. <p>
 
     @if(count($articles) > 1)
         {{ $articles->links() }}

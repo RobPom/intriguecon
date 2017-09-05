@@ -82,15 +82,22 @@ class GamesController extends Controller
         $game->tagline = $request->input('tagline');
         $game->short_description = $request->input('short_description');
         $game->description = $request->input('description');
-
         
-
         $game->advisory = "All Ages";
-        if ($request->has('newsletter') ? true: false) {
+        $game->gamemaster = "An Anonymous Stranger";
+        $game->system = "Advanced Faking It";
+
+        if ($request->has('advisory') ? true: false) {
             $game->advisory = $request->input('advisory');
-        } else {
-            
         }
+        if ($request->has('gamemaster') ? true: false) {
+            $game->gamemaster = $request->input('gamemaster');
+        }
+        if ($request->has('system') ? true: false) {
+            $game->system = $request->input('system');
+        }
+        
+       
         $game->min = $request->input('min');
         $game->max = $request->input('max');
 
@@ -141,6 +148,7 @@ class GamesController extends Controller
             'tagline' => 'required',
             'short_description' => 'required',
             'description' => 'required',
+            'advisory' => 'required',
             'min' => 'required',
             'max' => 'required',
             'game_image' => 'image|nullable|max:1999'
@@ -170,13 +178,14 @@ class GamesController extends Controller
         $game->short_description = $request->input('short_description');
         $game->description = $request->input('description');
         $game->advisory = $request->input('advisory');
+        $game->gamemaster = $request->input('gamemaster');
+        $game->system = $request->input('system');
         $game->min = $request->input('min');
         $game->max = $request->input('max');
         $game->edited_by = auth()->user()->id;
         if($request->hasFile('game_image')){
             $game->game_image = $fileNameToStore;
         }
-        $game->game_image = $fileNameToStore;
         $game->save();
 
         return redirect('/games/'. $game->id)->with('success', 'game updated');

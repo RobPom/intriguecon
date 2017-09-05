@@ -11,7 +11,7 @@
             @endif
         @endif
     </h1>
-    <h4><small>{{count(App\Game::all())}} games in library</small></h4>
+    <p>All of this years games in one spot. {{count(App\Game::all())}} games in total</p4>
 
     @if(count($games) > 0)
         {{ $games->links() }}

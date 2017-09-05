@@ -10,14 +10,16 @@
                  <img style="width:100%" src="/storage/game_images/{{$game->game_image}}">
             </div>
             <div class="col-lg-6 col-md-8 col-sm-8">
-                <div class="short-desc">{!!$game->short_description!!}</div>
                 <div class="visible-xs"><hr></div>
+                <div class="short-desc">{!!$game->short_description!!}</div> 
                 <p>{!!$game->description!!}</p>
             </div>
         </div>
     <hr>
     <div class="row">
         <div class="col-sm-6 pull-left">
+            <strong>Game Master:</strong> {!!$game->gamemaster!!}<br>
+            <strong>System:</strong> {!!$game->system!!}<br>
             <strong>Advisory:</strong> {!!$game->advisory!!}
         </div>
         <div class="col-sm-6 pull-right text-right">
