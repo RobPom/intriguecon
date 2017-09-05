@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700');
+        @import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700');
     </style>
     <title>{{config('app.name', 'IntrigueCon')}}</title>
 </head>

@@ -32,8 +32,26 @@
             {{Form::number('max', '8', ['class' => 'form-control', 'min' => '1' ,'max' => '10'])}}
         </div>
         <div class="form-group">
-            {{Form::file('game_image')}}
+            <div class="col-lg-6 col-sm-6 col-12">
+            {{Form::Label('game_image', 'Add an Game Image')}}
+                <div class="input-group">
+                    <label class="input-group-btn">
+                        <span class="btn btn-primary">
+                            Browse&hellip; <input type="file" style="display: none;" id="game_image" name="game_image">
+                        </span>
+                    </label>
+                    <input type="text" class="form-control" readonly>
+                </div>
+            </div>
+            <div class="form-group row">
+            <div class="col-sm-12 col-12">
+                <br>
+                <span><a href="/games" class="btn btn-default btn-sm pull-left">
+                    <i class="material-icons" style="vertical-align: middle;">keyboard_arrow_left</i>
+                    </a></span>
+                {{Form::submit('Submit', ['class' => 'btn btn-primary pull-right'])}}
+            </div>
         </div>
-        {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
     {!! Form::close() !!}
+    </div>
 @endsection

@@ -1,26 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
+
+<h1>Dashboard - {{Auth::user()->name}}</h1>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading"><h3>Dashboard - {{Auth::user()->name}}</h3></div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+            
+                   
 
                     @if (Auth::user()->admin)
-                        <h4>
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><h4>
                             <span>Your Articles</span>
                             <a href="/articles/create" class="btn btn-default btn-xs" style="margin-bottom:6px;">
-                                <i class="material-icons" style="vertical-align: middle;">add</i>
+                                <i class="material-icons" style="font-size:18px;vertical-align: middle;">add</i>
                             </a>
-                        </h4>
+                        </h4></div>
+
+                        <div class="panel-body">
                         @if(count($articles) > 0)
                             <table class="table table-striped">
                                 <tr>

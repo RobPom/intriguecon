@@ -21,6 +21,7 @@ html {
 
   body {
     font-family: 'Roboto', sans-serif;
+    color: #202020;
   }
 
   .yellow {color: yellow;}
@@ -30,3 +31,12 @@ html {
     font-size: 22px;
     padding: 12px 0 0 20px;
   }
+  h3 {
+    margin-top: 0px;
+  }
+.short-desc {
+ 
+  font-size: 1.2em;
+  font-weight: 500; 
+  line-height: 1.4em;
+}
