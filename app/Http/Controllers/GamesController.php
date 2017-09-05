@@ -201,7 +201,7 @@ class GamesController extends Controller
     {
         $game = Game::find($id);
         
-        if($game->cover_image != 'noimage.jpg'){
+        if($game->game_image != 'noimage.jpg'){
             //delete image
             Storage::delete('public/game_images/' . $game->game_image);
         }

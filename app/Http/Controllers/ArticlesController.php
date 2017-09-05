@@ -171,7 +171,7 @@ class ArticlesController extends Controller
         }
         
         //delete image
-        if($article->cover_image != 'noimage.jpg'){
+        if($article->article_image != 'noimage.jpg'){
             Storage::delete('public/article_images/' . $article->article_image);
         } 
         

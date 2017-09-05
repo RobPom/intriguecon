@@ -12,7 +12,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-               <span class="white"> Intrigue</span><span class="yellow">Con</span>
+               <span class="white">Intrigue</span><span class="yellow">Con</span>
             </a>
         </div>
 
@@ -23,6 +23,7 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="/events/1">Convention</a></li>
                 <li><a href="/articles">Articles</a></li>
                 <li><a href="/games">Games</a></li>
                 <!-- Authentication Links -->
