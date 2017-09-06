@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Event</h1>
+<h1>{{$event->title}}</h1>
 <hr>
 <div class="row">
     <div class="col-lg-3 col-md-4 col-sm-3 text-center">
         <img style="max-height:400px; max-width:100%;"src="/storage/event_images/{{$event->event_image}}">
     </div>
     <div class="col-lg-9 col-md-8 col-sm-9">
-        <h2>{{$event->title}}</h2>
+
         <p>{!! $event->description !!}</p>
     </div>
 </div>
@@ -32,30 +32,41 @@
     @endif
 @endif
 <hr>
-{{--      
-    @if($event->calendar === 0)
-    @else
-    @endif  
---}}
 <div class="row">
     <div class="col-sm-6">
         <div class="panel-default panel">
             <div class="panel-body">
                 <h4><i class="material-icons" style="padding-bottom:7px;">date_range</i> Calendar
-                 @if($event->calendar === 0)
+                @if(count($event->days) > 0) {{-- there are days created--}}
+                    @if(!Auth::guest())
+                        @if(Auth::user()->admin)
+                            <a href="/calendar/create/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
+                                <i class="material-icons" style="vertical-align: middle;">edit</i>
+                            </a>
+                        @endif
+                    @endif
+                    </h4><hr>
+                    <table class="table table-striped">
+                    
+                     @foreach($event->days as $day) 
+                        <tr>
+                            <td>{{date( "l F jS Y", strtotime( $day->date ) )}}</td>
+                            <td>{{date( "g:ia", strtotime( $day->start ) )}} to {{date( "g:ia", strtotime( $day->end ) )}}</td>
+                        </tr>
+                    @endforeach
+                    </table>
+                @else {{-- no days created--}}
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
                             <a href="/calendar/create/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
                                 <i class="material-icons" style="vertical-align: middle;">add</i>
-                            </a></h4><hr>
-                        @else
-                            </h4><hr>
-                            <p><em>Stay Tuned</em></p>
+                            </a>
                         @endif
-                    @else
-                        </h4><hr>
-                        <p><em>Stay Tuned</em></p>
                     @endif
+                    </h4><hr>
+                    <p><em>stay tuned</em></p>
+                   
+                    
                 @endif  
             </div>
         </div>
@@ -69,11 +80,12 @@
                         @if(Auth::user()->admin)
                             <a href="/calendar/create/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
                                 <i class="material-icons" style="vertical-align: middle;">add</i>
-                            </a></h4><hr>
+                            </a></h4><hr>                            
                         @else
                             </h4><hr>
                             <p><em>Stay Tuned</em></p>
                         @endif
+                        
                     @else
                         </h4><hr>
                         <p><em>Stay Tuned</em></p>

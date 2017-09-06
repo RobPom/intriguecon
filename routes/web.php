@@ -23,4 +23,8 @@ Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";
 }]);
 
+Route::get('/calendar/create/{id}', 'DaysController@create');
+Route::post('/calendar/add', 'DaysController@store');
+Route::delete('/calendar/create/{id}', 'DaysController@destroy');
+
 Route::get('/dashboard', 'DashboardController@index');
