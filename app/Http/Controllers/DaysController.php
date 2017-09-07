@@ -21,7 +21,7 @@ class DaysController extends Controller
             $defaults->end = '16:00:00';
 
         }
-        return view('days.create')->with('event', $event)->with('defaults', $defaults);
+        return view('days.manage')->with('event', $event)->with('defaults', $defaults);
     }
 
     public function store(Request $request){
@@ -37,7 +37,7 @@ class DaysController extends Controller
         $day->event_id = $request->input('event_id');
         $day->save();
 
-        return redirect('/calendar/create/'.  $day->event_id)->with('success', 'day added');
+        return redirect('/calendar/manage/'.  $day->event_id)->with('success', 'day added');
     }
 
     public function destroy($id)
@@ -45,6 +45,6 @@ class DaysController extends Controller
         $day = Day::find($id);
         $event_id = $day->event_id;
         $day->delete();
-        return redirect('/calendar/create/'.  $event_id)->with('success', 'day removed');
+        return redirect('/calendar/manage/'.  $event_id)->with('success', 'day removed');
     }
 }

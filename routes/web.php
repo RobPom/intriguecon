@@ -23,8 +23,12 @@ Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";
 }]);
 
-Route::get('/calendar/create/{id}', 'DaysController@create');
+Route::get('/calendar/manage/{id}', 'DaysController@create');
 Route::post('/calendar/add', 'DaysController@store');
-Route::delete('/calendar/create/{id}', 'DaysController@destroy');
+Route::delete('/calendar/manage/{id}', 'DaysController@destroy');
+
+Route::get('/timeslots/manage/{id}', 'TimeslotsController@create');
+Route::post('/timeslots/add', 'TimeslotsController@store');
+Route::delete('/timeslots/manage/{id}', 'TimeslotsController@destroy');
 
 Route::get('/dashboard', 'DashboardController@index');

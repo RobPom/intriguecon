@@ -40,7 +40,7 @@
                 @if(count($event->days) > 0) {{-- there are days created--}}
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
-                            <a href="/calendar/create/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
+                            <a href="/calendar/manage/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
                                 <i class="material-icons" style="vertical-align: middle;">edit</i>
                             </a>
                         @endif
@@ -58,7 +58,7 @@
                 @else {{-- no days created--}}
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
-                            <a href="/calendar/create/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
+                            <a href="/calendar/manage/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
                                 <i class="material-icons" style="vertical-align: middle;">add</i>
                             </a>
                         @endif
