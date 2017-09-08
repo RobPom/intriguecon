@@ -12,4 +12,8 @@ class Game extends Model
     public $primaryKey = 'id';
     //Timestamps
     public $timestamps = true;
+
+    public function timeslots(){
+        return $this->belongsToMany(Timeslot::class);
+    }
 }

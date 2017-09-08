@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Event;
+use App\Game;
+use DB;
 
 class EventsController extends Controller
 {
@@ -89,8 +91,11 @@ class EventsController extends Controller
      */
     public function show($id)
     {
+        $game_timeslot =  DB::table('game_timeslot')->inRandomOrder();
+        $featuredgame = Game::find($game_timeslot->first()->game_id);
+        $gamecount =  DB::table('game_timeslot')->count();
         $event = Event::find($id);
-        return view('events.show')->with('event', $event);
+        return view('events.show')->with('event', $event)->with('featuredgame', $featuredgame)->with('gamecount', $gamecount);
     }
 
     /**

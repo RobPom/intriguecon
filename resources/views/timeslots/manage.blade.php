@@ -12,6 +12,7 @@
         <th>Start</th>
         <th>End</th>
         <th></th>
+        <th></th>
     </tr>
     
         @foreach($event->timeslots as $timeslot)
@@ -20,6 +21,7 @@
             <td>{{date( "l", strtotime( $timeslot->date ) )}} </td>
             <td>{{date( "g:ia", strtotime( $timeslot->start ) )}} </td>
             <td>{{date( "g:ia", strtotime( $timeslot->end ) )}} </td>
+            <td>{{ $timeslot->gameslot ? "On" : "Off" }} </td>
             <td>
              @if(!Auth::guest())
                 @if(Auth::user()->admin)             
@@ -56,9 +58,17 @@
                     <div class="input-group-addon">to</div>
                     {{Form::time('end',  $defaults->end,  ['class' => 'form-control'])}}
                 </div>
-                {{Form::hidden('event_id',$event->id)}}
-                {{Form::submit('Add', ['class' => 'btn btn-primary'])}}
-            {!! Form::close() !!}
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input name="gameslot" name="gameslot" class="form-check-input" type="checkbox" checked  data-toggle="toggle">
+                </div>
+                <div class="input-group mb-2 mr-sm-2 mb-sm-0">                  
+                    {{Form::hidden('event_id',$event->id)}}
+                    {{Form::submit('Add', ['class' => 'btn btn-primary pull-right'])}}
+                    {!! Form::close() !!}
+                </div>
+                    
+                </div>
+                
 
 
 

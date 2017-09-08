@@ -45,6 +45,13 @@
                     </div>    
                 @endif
             @endif
+            
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12">
+        <h2>Schedule</h2>
         </div>
     </div>
 </div>

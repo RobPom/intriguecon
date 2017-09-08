@@ -74,22 +74,21 @@
     <div class="col-sm-6">
         <div class="panel-default panel">
             <div class="panel-body">
-                <h4><i class="material-icons" style="padding-bottom:5px;">location_on</i> Location
+                <h4><i class="material-icons" style="padding-bottom:5px;">list</i> Game Schedule
                 @if($event->calendar === 0)
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
-                            <a href="/calendar/create/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
+                            <a href="/schedule/manage/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
                                 <i class="material-icons" style="vertical-align: middle;">add</i>
-                            </a></h4><hr>                            
-                        @else
-                            </h4><hr>
-                            <p><em>Stay Tuned</em></p>
+                            </a>                          
                         @endif
-                        
-                    @else
-                        </h4><hr>
-                        <p><em>Stay Tuned</em></p>
                     @endif
+                    </h4><hr>
+                    <h5>Featured Game</h5>
+                    <div class="list-group">
+                        <a href="/games/{{$featuredgame->id}}" class="list-group-item list-group-item-action">{{$featuredgame->name}}</strong></a>
+                    </div>
+      
                 @endif  
             </div>
         </div>

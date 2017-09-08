@@ -10,6 +10,16 @@ use Carbon\Carbon;
 
 class TimeslotsController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+     public function __construct()
+     {
+         $this->middleware('admin');
+     }
+
     public function create($id)
     {
         $event = Event::find($id);
@@ -45,6 +55,14 @@ class TimeslotsController extends Controller
         $timeslot->date = $request->input('day');
         $timeslot->start = $request->input('start');
         $timeslot->end = $request->input('end');
+        if($request->input('gameslot')){
+            $timeslot->gameslot = 1;
+            echo "on";
+        } else {
+            $timeslot->gameslot = 0;
+            echo "off";
+        }
+        //$timeslot->gameslot = $request->input('gameslot');
         $timeslot->event_id = $request->input('event_id');
         $timeslot->save();
 
@@ -56,6 +74,6 @@ class TimeslotsController extends Controller
         $timeslot = Timeslot::find($id);
         $event_id = $timeslot->event_id;
         $timeslot->delete();
-        return redirect('/timeslot/manage/'.  $event_id)->with('success', 'timeslot removed');
+        return redirect('/timeslots/manage/'.  $event_id)->with('success', 'timeslot removed');
     }
 }
