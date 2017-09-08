@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Game;
 use App\User;
+use App\Event;
 
 class GamesController extends Controller
 {
@@ -118,8 +119,9 @@ class GamesController extends Controller
     public function show($id)
     {
         $game = Game::find($id);
+        $event = Event::where('active', 1)->first();
         $created_by = User::find($game->created_by);
-        return view('games.show')->with('game', $game)->with('created_by', $created_by);
+        return view('games.show')->with('game', $game)->with('created_by', $created_by)->with('event', $event);
     }
 
     /**

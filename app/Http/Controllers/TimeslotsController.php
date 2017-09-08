@@ -43,6 +43,14 @@ class TimeslotsController extends Controller
         return view('timeslots.manage')->with('event', $event)->with('defaults', $defaults)->with('dayArray', $dayArray);
     }
 
+    public function schedule($event_id, $timeslot_id){
+
+        $event = Event::find($event_id);
+        $timeslot = Timeslot::find($timeslot_id);
+        
+        return view('schedule/timeslot')->with('event', $event)->with('timeslot', $timeslot);
+    }
+
     public function store(Request $request){
         $this->validate($request, [
             'name' => 'required',

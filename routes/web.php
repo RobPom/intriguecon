@@ -30,9 +30,13 @@ Route::delete('/calendar/manage/{id}', 'DaysController@destroy');
 Route::get('/timeslots/manage/{id}', 'TimeslotsController@create');
 Route::post('/timeslots/add', 'TimeslotsController@store');
 Route::delete('/timeslots/manage/{id}', 'TimeslotsController@destroy');
+Route::get('/timeslots/show/{id}', 'TimeslotsController@create');
 
 Route::get('/schedule/manage/{id}', 'SchedulesController@index');
 Route::post('/schedule/add', 'SchedulesController@store');
 Route::post('/schedule/remove', 'SchedulesController@remove');
+Route::get('/schedule/show/{id}', 'SchedulesController@show');
+
+Route::get('/schedule/{event}/timeslot/{timeslot}', 'TimeslotsController@schedule');
 
 Route::get('/dashboard', 'DashboardController@index');

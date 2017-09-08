@@ -51,7 +51,23 @@
     <hr>
     <div class="row">
         <div class="col-sm-12">
-        <h2>Schedule</h2>
+            <h2>{{$event->title}} Schedule</h2>
+            @if(count($game->timeslots()->where('event_id', $event->id)->get()) > 0)   
+                    @foreach($game->timeslots as $timeslot)
+                    @if($timeslot->gameslot)
+                        <a href="/schedule/1/timeslot/{{$timeslot->id}}" class="list-group-item ">
+                            <h4 style="display: inline-block;">{{$timeslot->name}} - </h4>
+                            {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}
+                            <span class="badge ">#</span>
+                        </a>
+                    @endif
+                @endforeach 
+            @else
+                <em>Stay Tuned</em>
+            @endif
+
+
+            
         </div>
     </div>
 </div>

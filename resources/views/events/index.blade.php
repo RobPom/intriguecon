@@ -19,11 +19,13 @@
             <div class="well">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-3 text-center hidden-xs">
-                        <img style="max-width:100%; max-height:140px;" src="/storage/event_images/{{$event->event_image}}">
+                        <img style="max-width:100%; max-height:100px;" src="/storage/event_images/{{$event->event_image}}">
                     </div>
                     <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                         <h3><a href="/events/{{$event->id}}">{{$event->title}}</a></h3>
-                        <p>{!!$event->description!!}</p>
+                        @if($event->status['active'])
+                            This is the active convention
+                        @endif
                     </div>
                 </div>
             </div>

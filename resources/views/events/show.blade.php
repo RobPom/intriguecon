@@ -45,16 +45,17 @@
                             </a>
                         @endif
                     @endif
+                        <div class="pull-right"><a href="/schedule/show/{{$event->id}}" class="btn btn-primary"> View Schedule</a></div>
                     </h4><hr>
                     <table class="table table-striped">
-                    
-                     @foreach($event->days as $day) 
-                        <tr>
-                            <td>{{date( "l F jS Y", strtotime( $day->date ) )}}</td>
-                            <td>{{date( "g:ia", strtotime( $day->start ) )}} to {{date( "g:ia", strtotime( $day->end ) )}}</td>
-                        </tr>
-                    @endforeach
+                        @foreach($event->days as $day) 
+                            <tr>
+                                <td>{{date( "l F jS Y", strtotime( $day->date ) )}}</td>
+                                <td>{{date( "g:ia", strtotime( $day->start ) )}} to {{date( "g:ia", strtotime( $day->end ) )}}</td>
+                            </tr>
+                        @endforeach
                     </table>
+                    
                 @else {{-- no days created--}}
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
@@ -74,7 +75,7 @@
     <div class="col-sm-6">
         <div class="panel-default panel">
             <div class="panel-body">
-                <h4><i class="material-icons" style="padding-bottom:5px;">list</i> Game Schedule
+                <h4><i class="material-icons" style="padding-bottom:5px;">list</i> The Games
                 @if($event->calendar === 0)
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
@@ -83,12 +84,25 @@
                             </a>                          
                         @endif
                     @endif
+                    <div class="pull-right"><a href="/games" class="btn btn-primary">Games List</a></div>
                     </h4><hr>
-                    <h5>Featured Game</h5>
-                    <div class="list-group">
-                        <a href="/games/{{$featuredgame->id}}" class="list-group-item list-group-item-action">{{$featuredgame->name}}</strong></a>
+                     @if($event->status['active'])
+                         <h5>Featured</h5>                                                             
+                        <div class="media">
+                            <a href="/games/{{$featuredgame->id}}" class="list-group-item list-group-item-action">
+                                <div class="media-left media-middle">
+                                    <img src="/storage/game_images/{{$featuredgame->game_image}}" class=" media-object img-thumbnail" alt="Cinque Terre" width="50" >
+                                </div>
+                                <div class="media-body media-middle">
+                                    <h4 class="media-heading">{{$featuredgame->name}}</h4>
+                                </div>
+                            </a>
                     </div>
-      
+
+                    @else
+                        <em>stay tuned</em>
+                    @endif
+                    
                 @endif  
             </div>
         </div>

@@ -33,6 +33,13 @@ class SchedulesController extends Controller
         return view('schedule/manage')->with('event', $event)->with('timeslots', $timeslots)->with('games', $games)->with('game_select', $game_select);
     }
 
+    public function show($id){
+        $event = Event::find($id);
+        $timeslots = $event->timeslots;
+        $games = Game::all();
+        return view('schedule/view')->with('event', $event)->with('timeslots', $timeslots)->with('games', $games);
+    }
+
     public function add($id){
         $event = Event::find($id);
         $timeslots = $event->timeslots;
