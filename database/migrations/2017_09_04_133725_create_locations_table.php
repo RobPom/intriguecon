@@ -17,11 +17,11 @@ class CreateLocationsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('street_1');
-            $table->string('street_2');
+            $table->string('street_2')->nullable();
             $table->string('city');
             $table->string('province');
             $table->string('country');
-            $table->string('postal');
+            $table->string('postal')->nullable();
             $table->timestamps();
         });
     }

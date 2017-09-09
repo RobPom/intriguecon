@@ -77,7 +77,6 @@ class EventsController extends Controller
         $event->description = $request->input('description');
         $event->event_image = $fileNameToStore;
         $event->active = false;
-        $event->calendar = 0;
         $event->save();
 
         return redirect('/events/'. $event->id)->with('success', 'event created');

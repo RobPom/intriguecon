@@ -18,6 +18,7 @@ Route::get('/about', 'PagesController@about');
 Route::resource('articles', 'ArticlesController');
 Route::resource('games', 'GamesController');
 Route::resource('events', 'EventsController');
+Route::resource('locations', 'LocationsController');
 Auth::routes();
 Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";

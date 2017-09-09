@@ -18,7 +18,6 @@ class CreateEventsTable extends Migration
             $table->string('title');
             $table->mediumText('description');
             $table->string('event_image');
-            $table->integer('calendar')->default(0);
             $table->timestamps();
         });
     }

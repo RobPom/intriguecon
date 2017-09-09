@@ -60,6 +60,8 @@
                             {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}
                             <span class="badge ">#</span>
                         </a>
+                    @else
+                        <em>Stay Tuned</em>
                     @endif
                 @endforeach 
             @else
