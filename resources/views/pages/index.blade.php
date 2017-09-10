@@ -11,13 +11,12 @@
             <p class="header-p" style="font-weight: medium;">Edmonton Alberta's ultimate tabletop roleplaying experience 
             returns October 13 - 15 at the Queen Alexandra Community League Hall.</p>
             <p class="lead ">
-                <a class="btn btn-primary btn-md" href="events/1" role="button">Register</a>
-                <a class="btn btn-primary btn-md" href="events/1" role="button">Learn more</a>  
+                <a class="btn btn-primary btn-md" href="/reserve" role="button">Register</a>
+                <a class="btn btn-primary btn-md" href="/events/1" role="button">Learn more</a>  
             </p>
         </div>
     </div>
 </div>
-
 
     <div class="row" style="margin-top:20px;">
         <div class="col-sm-12">
@@ -112,7 +111,7 @@
             </div>
             <div class="row force-to-bottom text-center">
                 <div class="col-sm-12">
-                    <a href="games/" class="btn btn-md btn-primary ">Find Out More</a>
+                    <a href="volunteer/" class="btn btn-md btn-primary ">Find Out More</a>
                 </div>         
             </div>
         </div>
@@ -121,43 +120,21 @@
     <div class="row visible-xs">
         <div class="col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-body vertical-center">
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                            <img src='/img/block-img-article.png' height="60px">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Articles</h4>
-                            <p>Here are some things we wrote about some other things.</p>
-                
-                        </div>
-                    </div>
-                    <div class="col-sm-12 text-right">
-                        <a href="games/" class="btn btn-md btn-primary ">Archive</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-body vertical-center">
-                    <div class="media">
-                        <div class="media-left ">
-                            <a href="#">
-                            <img src='/img/block-img-games.png' height="60px">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Games</h4>
-                            <p>All of the games in one place, {{count($games)}} in total!</p>
-                        </div>
-                    </div>
+                <div class="panel-body">
                     <div class="row">
-                        <div class="col-sm-12 text-right">
-                            <a href="games/" class="btn btn-md btn-primary ">All Games</a>
+                        <div class="col-sm-12">
+                            <div class="media">
+                                <div class="media-left">                                   
+                                    <img src='/img/block-img-article.png' height="60px">                                    
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading" style="margin-top:8px;">Articles</h4>
+                                    <p>Here are some things we wrote about some other things.</p>                
+                                </div>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                                <a href="games/" class="btn btn-md btn-primary ">Archive</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,25 +143,56 @@
 
         <div class="col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-body vertical-center">
-                    <div class="media">
-                        <div class="media-left">
-                            <a href="#">
-                            <img src='/img/block-img-volunteer.png' height="60px">
-                            </a>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                    <img src='/img/block-img-games.png' height="60px">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading" style="margin-top:8px;">Games</h4>
+                                    <p>All of the games in one place, {{count($games)}} in total!</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 text-center">
+                                    <a href="games/" class="btn btn-md btn-primary ">All Games</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">Volunteer</h4>
-                            <p>Want to help out or become a Gamemaster?</p>
-                
-                        </div>
-                    </div>
-                    <div class="col-sm-12 text-right">
-                        <a href="games/" class="btn btn-md btn-primary ">More Info</a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="col-xs-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                    <img src='/img/block-img-volunteer.png' height="60px">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h4 class="media-heading" style="margin-top:8px;">Volunteer</h4>
+                                    <p>Want to help out or become a Gamemaster?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 text-center">
+                            <a href="games/" class="btn btn-md btn-primary ">More Info</a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+       
 
     </div>
 
@@ -194,7 +202,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="col-xs-12">
-                        <h3 class="shadowed">Sponsers<h3>
+                        <h3 class="shadowed">Sponsors<h3>
                         <p class="lead">We would like to thank our sponsors for making this event possible</p>
                     </div>
                     <div class="col-sm-4 col-lg-3">

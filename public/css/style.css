@@ -18,6 +18,16 @@ html {
     height: 160px;
     background-color: #333;
   }
+  
+  .footer-menu a{
+    font-size: 14px;
+    
+    color: white;
+  }
+  .footer-menu a:hover {
+    color: #E5DCDC;
+
+  }
 
   body {
     font-family: 'Roboto', sans-serif;
@@ -51,7 +61,6 @@ html {
 div.col-xs-12.col-sm-6.responsive-align{
   text-align: left;
 }
-
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
@@ -110,3 +119,31 @@ h1 {
 a:hover{
   text-decoration: none;
 }
+
+
+.social-facebook {
+  width: 40px;
+  height:40px;
+  display:block;
+  background:url('/img/social-facebook.png');
+  background-size:40px;
+}
+
+
+.social-google {
+  width: 40px;
+  height:40px;
+  display:block;
+  background:url('/img/social-google.png');
+  background-size:40px;
+}
+
+
+.social-twitter {
+  width: 40px;
+  height:40px;
+  display:block;
+  background:url('/img/social-twitter.png') center top no-repeat;
+  background-size:40px;
+}
+

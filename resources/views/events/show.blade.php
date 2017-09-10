@@ -5,15 +5,15 @@
 @if(!Auth::guest())
     @if(Auth::user()->admin)
         <h1>{{$event->title}}
-                <div class="pull-right">
-                        <a href="/events/{{$event->id}}/edit" class="btn btn-default btn-sm" style="margin-bottom:6px;">
-                                <i class="material-icons" style="vertical-align: middle;">mode_edit</i>
-                        </a>
-                        {!!Form::open(['action' => ['EventsController@destroy', $event->id], 'method' => 'POST', 'style' => 'display:inline;' ])!!}
-                            {{Form::hidden('_method', 'DELETE')}}
-                            {{Form::button("<i class='material-icons' style='vertical-align: middle;'>delete</i>", ['type' => 'submit', 'style' => 'margin-bottom:6px;', 'class' => 'btn btn-danger btn-sm'])}}
-                        {!!Form::close()!!}
-                 </div>
+            <div class="pull-right">
+                <a href="/events/{{$event->id}}/edit" class="btn btn-default btn-sm" style="margin-bottom:6px;">
+                        <i class="material-icons" style="vertical-align: middle;">mode_edit</i>
+                </a>
+                {!!Form::open(['action' => ['EventsController@destroy', $event->id], 'method' => 'POST', 'style' => 'display:inline;' ])!!}
+                    {{Form::hidden('_method', 'DELETE')}}
+                    {{Form::button("<i class='material-icons' style='vertical-align: middle;'>delete</i>", ['type' => 'submit', 'style' => 'margin-bottom:6px;', 'class' => 'btn btn-danger btn-sm'])}}
+                {!!Form::close()!!}
+                </div>
         </h1>         
     @else
         <h1>{{$event->title}}</h1>
@@ -23,10 +23,10 @@
 @endif
 <hr>
 <div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-4">
+    <div class="col-lg-4 col-md-4 col-sm-4">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <img style="max-height:400px; max-width:100%;margin-bottom:10px;"src="/storage/event_images/{{$event->event_image}}">
+                <img class="img-thumbnail" style="max-height:400px; max-width:100%;margin-bottom:10px;"src="/storage/event_images/{{$event->event_image}}">
             </div>
         </div>
         <div class="row">
@@ -53,8 +53,18 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-9 col-md-8 col-sm-8">
-        <p>{!! $event->description !!}</p>
+    <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="row">
+            <div class="col-xs-12">
+                <p>{!! $event->description !!}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <a href="/reserve" class="btn btn-lg btn-primary">Register!</a>
+            </div>
+        </div>
+        <br>   
     </div>
 </div>
     

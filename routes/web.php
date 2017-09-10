@@ -14,6 +14,9 @@
 Route::get('/', 'PagesController@index');
 Route::get('/home', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
+Route::get('/volunteer', 'PagesController@volunteer');
+Route::get('/code-of-conduct', 'PagesController@code_of_conduct');
+Route::get('/reserve', 'PagesController@reserve');
 
 Route::resource('articles', 'ArticlesController');
 Route::resource('games', 'GamesController');

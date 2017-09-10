@@ -135,15 +135,12 @@ class EventsController extends Controller
             $fileNameToStore = $filename.'_'.time(). '.' .$extention;
             //upload Image
             $path = $request->file('event_image')->storeAs('public/event_images', $fileNameToStore );
-        } else {
-             //change this to not use image if not saved
-            $fileNameToStore = 'noimage.jpg';
-        }
+        } 
 
         $event = Event::find($id);
         $event->title = $request->input('title');
         $event->description = $request->input('description');
-        $event->event_image = $fileNameToStore;
+    
         $event->save();
         if($request->hasFile('event_image')){
             $event->event_image = $fileNameToStore;
