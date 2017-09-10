@@ -28,14 +28,18 @@ html {
   .white {color:white;}
 
   a.navbar-brand{
+    font-family: 'Raleway', sans-serif;
     font-size: 22px;
+    font-weight: 300;
     padding: 12px 0 0 20px;
+    text-shadow: 1px 1px 4px #F9F3F3;
   }
   h3 {
     margin-top: 0px;
   }
+  
 .short-desc {
- 
+
   font-size: 1.2em;
   font-weight: 500; 
   line-height: 1.4em;
@@ -56,3 +60,53 @@ div.col-xs-12.col-sm-6.responsive-align{
   }
 }
 
+.jumbotron {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 0px;
+  background: url(/img/lil_nap.png) right bottom no-repeat, url(/img/paper_texture_02.jpg) no-repeat ;
+  box-shadow: inset 0px 0px 600px rgba(0, 0, 0, 0.80);
+  background-size: 200px, cover;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.1em;
+}
+
+.jumbotron h1{
+  font-weight: 600;
+
+}
+
+.jumbotron .quote {
+  font-weight: 300;
+
+}
+
+.jumbotron p{
+  font-weight: 600;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 4px #0C0000;
+}
+
+h3.shadowed {
+  text-shadow: 1px 1px 2px #5F5959 !important;
+}
+h1 {
+  text-shadow: 1px 1px 2px #5F5959 !important;
+}
+
+.jumbotron img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+
+
+  .row.equal {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
+a:hover{
+  text-decoration: none;
+}

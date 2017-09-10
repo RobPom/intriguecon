@@ -14,11 +14,11 @@
         <div class="row form-group">
             <div class="col-lg-6 col-sm-6 col-xs-12">
                 {{Form::Label('gamemaster', 'Game Master')}}
-                {{Form::text('gamemaster', '', ['class' => 'form-control', 'placeholder' => 'The Anonymous Stranger'])}}
+                {{Form::text('gamemaster', 'The Anonymous Stranger', ['class' => 'form-control', 'placeholder' => 'The Anonymous Stranger'])}}
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-12">
                 {{Form::Label('system', 'System')}}
-                {{Form::text('system', '', ['class' => 'form-control', 'placeholder' => 'Advanced Faking It'])}}
+                {{Form::text('system', 'Advanced Faking It', ['class' => 'form-control', 'placeholder' => 'Advanced Faking It'])}}
             </div>
         </div>
         <div class="form-group">

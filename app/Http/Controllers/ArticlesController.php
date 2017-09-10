@@ -26,7 +26,7 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->paginate(5);
+        $articles = Article::orderBy('created_at', 'asc')->paginate(5);
         return view('articles.index')->with('articles' , $articles);
     }
 

@@ -12,7 +12,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-               <span class="white">Intrigue</span><span class="yellow">Con</span>
+               <img src='/img/d8-icon-header-white.png' style="display: inline-block; padding-bottom: 4px;" > <span class="white">IntrigueCon</span>
             </a>
         </div>
 

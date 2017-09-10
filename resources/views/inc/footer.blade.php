@@ -2,8 +2,10 @@
     <div class="container">
       <div class="row">
             <div class="col-sm-4">
-                <a href="#">Facebook</a><br>
-                <a href="#">Twitter</a><br>
+                <i class="icon-social-facebook"></i>
+                <a class="icon-social-facebook" href="#"></a><br>
+                <span class="input-group-addon"></span>
+                <a data-icon="e" href="#">Twitter</a><br>
                 <a href="#">Google+</a><br>
             </div>
             <div class="col-sm-4">
@@ -15,4 +17,7 @@
             </div>
         </div>
     </div>
+
+
+     <img src="/img/social-facebook.svg">
 </footer>

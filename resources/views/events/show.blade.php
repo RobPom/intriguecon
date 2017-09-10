@@ -100,7 +100,7 @@
     <div class="col-sm-6">
         <div class="panel-default panel">
             <div class="panel-body">
-                <h4><i class="material-icons" style="padding-bottom:5px;">list</i> The Games
+                <h4><img src='/img/d8-icon.png' > The Games
                 
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
