@@ -80,7 +80,7 @@
             </div>
             <div class="row force-to-bottom text-center">
                 <div class="col-sm-12">
-                    <a href="games/" class="btn btn-md btn-primary ">All Articles</a>
+                    <a href="articles/" class="btn btn-md btn-primary ">All Articles</a>
                 </div>         
             </div>
         </div>
