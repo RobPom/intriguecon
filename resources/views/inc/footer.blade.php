@@ -15,7 +15,6 @@
                 <ul class="list-unstyled ">                    
                     <li class="footer-menu"><a href="/about">About Us</a><br></li>
                     <li class="footer-menu"><a href="/code-of-conduct">Code of Conduct</a></li>
-
                     @if (Auth::guest())
                         <li class="footer-menu"><a href="{{ route('login') }}">Login</a></li>
                     {{--   <li><a href="{{ route('register') }}">Register</a></li>  --}}

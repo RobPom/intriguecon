@@ -3,32 +3,40 @@
 @section('content')
 <h1>{{$event->title}} - {{$timeslot->name}}</h1>
 
-<div class="panel panel-default">
-    <div class="panel-heading"><h4>
-        {{date( "l", strtotime( $timeslot->start ) )}}
-        {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}  
-        </h4>
-    </div>
 
-    <div class="panel-body">
-        <div class="list-group">
-            @if(count($timeslot->games) > 0 )
-                @foreach($timeslot->games as $game)
-                    <div class="media">
-                    <a href="/games/{{$game->id}}" class="list-group-item list-group-item-action">
-                        <div class="media-left media-middle">
-                            <img src="/storage/game_images/{{$game->game_image}}" class=" media-object img-thumbnail" width="50" >
+<div class="row">
+    <div class="col-sm-12 col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading panel-heading-schedule"><h4>
+                {{date( "l", strtotime( $timeslot->start ) )}}
+                {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}  
+                </h4>
+            </div>
+
+            <div class="panel-body">
+                <div class="list-group">
+                    @if(count($timeslot->games) > 0 )
+                    <strong>Games on Schedule</strong>
+                        @foreach($timeslot->games as $game)
+                            <div class="media">
+                            <a href="/games/{{$game->id}}" class="list-group-item list-group-item-action">
+                                <div class="media-left media-middle">
+                                    <img src="/storage/game_images/{{$game->game_image}}" class=" media-object img-thumbnail" width="50" >
+                                </div>
+                                <div class="media-body media-middle">
+                                    <strong class="media-heading">{{$game->name}}</strong>
+                                </div>
+                            </a>
                         </div>
-                        <div class="media-body media-middle">
-                            <h4 class="media-heading">{{$game->name}}</h4>
+                        @endforeach
+                    @else
+                        <div class="col-xs-12 bg-info" style="padding-top:20px;padding-bottom:20px;">
+                            <i class="material-icons" style="display:inline-block;vertical-align: middle;margin-right:20px;">error_outline</i><span><strong>No Games Scheduled</strong></span>
                         </div>
-                    </a>
+                    @endif
                 </div>
-                @endforeach
-            @else
-            No Games Scheduled :(
-            @endif
+            </div>
         </div>
     </div>
-</div>
+</div> 
 @endsection

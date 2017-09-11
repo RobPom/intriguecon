@@ -16,7 +16,7 @@ class SchedulesController extends Controller
      */
      public function __construct()
      {
-         $this->middleware('admin');
+         $this->middleware('admin', ['except' => ['index', 'show']]);
      }
      
     public function index($id){

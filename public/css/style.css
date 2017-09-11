@@ -115,12 +115,10 @@ h1 {
   display: flex;
   flex-wrap: wrap;
 }
-
   
 a:hover{
   text-decoration: none;
 }
-
 
 .social-facebook {
   width: 30px;
@@ -130,7 +128,6 @@ a:hover{
   background-size:30px;
 }
 
-
 .social-google {
   width: 30px;
   height: 30px;
@@ -138,7 +135,6 @@ a:hover{
   background:url('/img/social-google.png');
   background-size:30px;
 }
-
 
 .social-twitter {
   width: 30px;
@@ -148,3 +144,8 @@ a:hover{
   background-size:30px;
 }
 
+.panel-default > .panel-heading-schedule {
+  background: #756767; 
+  color: #fff;
+  text-shadow: 1px 1px 4px #0C0000;
+}

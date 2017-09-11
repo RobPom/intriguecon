@@ -45,31 +45,27 @@
                     </div>    
                 @endif
             @endif
-            
         </div>
     </div>
     <hr>
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-12" style="margin-bottom:50px;">
             <h2>{{$event->title}} Schedule</h2>
-            @if(count($game->timeslots()->where('event_id', $event->id)->get()) > 0)   
-                    @foreach($game->timeslots as $timeslot)
+            @if(count($game->timeslots()->where('event_id', $event->id)->get()) > 0)
+                @foreach($game->timeslots as $timeslot)
                     @if($timeslot->gameslot)
                         <a href="/schedule/1/timeslot/{{$timeslot->id}}" class="list-group-item ">
                             <h4 style="display: inline-block;">{{$timeslot->name}} - </h4>
                             {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}
                             <span class="badge ">#</span>
                         </a>
-                    @else
-                        <em>Stay Tuned</em>
                     @endif
-                @endforeach 
+                @endforeach
             @else
-                <em>Stay Tuned</em>
+                <div class="col-xs-12 bg-info" style="padding-top:20px;padding-bottom:20px;">
+                    <i class="material-icons" style="display:inline-block;vertical-align: middle;margin-right:20px;">error_outline</i><span><strong>Not scheduled</strong></span>
+                </div>
             @endif
-
-
-            
         </div>
     </div>
 </div>

@@ -17,7 +17,7 @@ class TimeslotsController extends Controller
      */
      public function __construct()
      {
-         $this->middleware('admin');
+        $this->middleware('admin', ['except' => ['schedule']]);
      }
 
     public function create($id)

@@ -9,6 +9,16 @@ use Carbon\Carbon;
 
 class DaysController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+     public function __construct()
+     {
+         $this->middleware('admin');
+     }
+
     public function create($id)
     {
         $event = Event::find($id);

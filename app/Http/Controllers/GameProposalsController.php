@@ -8,6 +8,16 @@ use App\Game;
 
 class GameProposalsController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+     public function __construct()
+     {
+         $this->middleware('admin', ['except' => ['store']]);
+     }
+     
     public function store(Request $request)
     {
         $this->validate($request, [

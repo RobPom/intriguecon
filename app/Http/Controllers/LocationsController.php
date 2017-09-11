@@ -7,7 +7,15 @@ use App\Location;
 use Mapper;
 
 class LocationsController extends Controller
-{
+{   /**
+    * Create a new controller instance.
+    *
+    * @return void
+    */
+    public function __construct()
+    {
+        $this->middleware('admin', ['except' => ['show']]);
+    }
     /**
      * Display a listing of the resource.
      *

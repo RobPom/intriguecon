@@ -8,6 +8,7 @@
     <div class="panel-body">
         <p>Your submission will be read and one of us will contact you at the provided email</p>
         <p><strong>{{$game->email}}</strong><p>
+        <p>Thanks! You're a champ!</p>
         <a href="/volunteer" class="btn btn-default">Submit Another!</a><br><br>
         <a href="/" class="btn btn-default">Back to Front Page</a>
     </div>
