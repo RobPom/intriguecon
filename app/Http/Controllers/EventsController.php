@@ -76,7 +76,6 @@ class EventsController extends Controller
         $event->title = $request->input('title');
         $event->description = $request->input('description');
         $event->event_image = $fileNameToStore;
-        $event->active = false;
         $event->save();
 
         return redirect('/events/'. $event->id)->with('success', 'event created');
@@ -89,12 +88,24 @@ class EventsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        $game_timeslot =  DB::table('game_timeslot')->inRandomOrder();
-        $featuredgame = Game::find($game_timeslot->first()->game_id);
-        $gamecount =  DB::table('game_timeslot')->count();
-        $event = Event::find($id);
-        return view('events.show')->with('event', $event)->with('featuredgame', $featuredgame)->with('gamecount', $gamecount);
+    {  
+        if($event = Event::find($id)){
+            $game_timeslot =  DB::table('game_timeslot')->inRandomOrder();
+            $gamecount =  DB::table('game_timeslot')->count();
+            if($gamecount > 0 ){
+                $featuredgame = Game::find($game_timeslot->first()->game_id);
+            } else {
+                $featuredgame = 0;
+            }
+            return view('events.show')->with('event', $event)->with('featuredgame', $featuredgame)->with('gamecount', $gamecount);
+        } else {
+            if((!Auth::guest()) && (Auth::user()->admin) ) {
+                return view('events.create');
+            } else {
+                return view('pages.index')->with('games', 'none');
+            }
+
+        }
     }
 
     /**

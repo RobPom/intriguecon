@@ -22,6 +22,7 @@ class SchedulesController extends Controller
     public function index($id){
         $event = Event::find($id);
         $timeslots = $event->timeslots;
+        $game_select['0'] = "No Games";
         $games = Game::all();
         if($games) {
             foreach($games as $game){
@@ -29,6 +30,8 @@ class SchedulesController extends Controller
                 $label = $game->name;
                 $game_select[$id] = $label;
             }
+        } else {
+           
         }
         return view('schedule/manage')->with('event', $event)->with('timeslots', $timeslots)->with('games', $games)->with('game_select', $game_select);
     }

@@ -11,7 +11,7 @@
             @endif
         @endif
     </h1>
-    <p>All IntrigueCons, {{count(App\Event::all())}} in total</p4>
+    <p>All IntrigueCons, {{count(App\Event::all())}} in total</p>
     @if(count($events) > 0)
       {{--    {{ $events->links() }}  --}}
       

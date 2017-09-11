@@ -33,15 +33,15 @@
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner">
                                 <div class="item active">
-                                <img src="img/con_table_02.jpg" alt="Table Top Game">
+                                <img src="/img/con_table_02.jpg" alt="Table Top Game">
                                 </div>
 
                                 <div class="item">
-                                <img src="img/con_table_01.jpg" alt="Table Top Game">
+                                <img src="/img/con_table_01.jpg" alt="Table Top Game">
                                 </div>
 
                                 <div class="item">
-                                <img src="img/con_table_03.jpg" alt="Table Top Game">
+                                <img src="/img/con_table_03.jpg" alt="Table Top Game">
                                 </div>
                             </div>
 
@@ -90,7 +90,11 @@
             <h3 class="shadowed" style="padding:10px;">Games</h3> 
             <div class="row">
                 <div class="col-sm-12" >
-                    <p>All of the games in one place, {{count($games)}} in total!</p>
+                @if($games === 'none')
+                 <p>All of the games in one place, {{count($games)}} in total!</p>
+
+                @endif
+                   
                 </div>
             </div>
             <div class="row force-to-bottom text-center">
