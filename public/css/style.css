@@ -17,6 +17,7 @@ html {
     /* Set the fixed height of the footer here */
     height: 160px;
     background-color: #333;
+    box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.65);
   }
   
   .footer-menu a{
@@ -110,10 +111,10 @@ h1 {
 }
 
 
-  .row.equal {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.row.equal {
+  display: flex;
+  flex-wrap: wrap;
+}
 
   
 a:hover{
@@ -122,28 +123,28 @@ a:hover{
 
 
 .social-facebook {
-  width: 40px;
-  height:40px;
+  width: 30px;
+  height:30px;
   display:block;
   background:url('/img/social-facebook.png');
-  background-size:40px;
+  background-size:30px;
 }
 
 
 .social-google {
-  width: 40px;
-  height:40px;
+  width: 30px;
+  height: 30px;
   display:block;
   background:url('/img/social-google.png');
-  background-size:40px;
+  background-size:30px;
 }
 
 
 .social-twitter {
-  width: 40px;
-  height:40px;
+  width: 30px;
+  height:30px;
   display:block;
   background:url('/img/social-twitter.png') center top no-repeat;
-  background-size:40px;
+  background-size:30px;
 }
 

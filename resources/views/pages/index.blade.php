@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="jumbotron">
-    <h1 class="display-3">Intrigue<span style="color:yellow">Con</span> 2017</h1>
+    <h1 class="display-3">Intrigue<span style="color:yellow">Con 2017</span></h1>
     <div class="row">
         <div class="col-sm-8 col-md-10 col-lg-10">
              <p class="lead quote hidden-xs"><em>Glory is fleeting. Obscurity lasts forever.</em></p>

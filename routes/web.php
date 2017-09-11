@@ -27,6 +27,12 @@ Route::get('protected', ['middleware' => ['auth', 'admin'], function() {
     return "this page requires that you be logged in and an Admin";
 }]);
 
+Route::post('/proposal/add', 'GameProposalsController@store');
+Route::get('/proposals/submitted', 'GameProposalsController@submitted');
+Route::get('/proposals/{id}/edit', 'GameProposalsController@edit');
+Route::post('/proposals/insert', 'GameProposalsController@insert');
+Route::delete('/proposals/{id}', 'GameProposalsController@destroy');
+
 Route::get('/calendar/manage/{id}', 'DaysController@create');
 Route::post('/calendar/add', 'DaysController@store');
 Route::delete('/calendar/manage/{id}', 'DaysController@destroy');

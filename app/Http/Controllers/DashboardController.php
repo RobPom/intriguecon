@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\GameProposal;
+use DB;
 
 class DashboardController extends Controller
 {
@@ -26,6 +29,7 @@ class DashboardController extends Controller
     {   
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('dashboard')->with('articles', $user->articles()->paginate(4));
+        $proposals =  DB::table('game_proposals')->paginate(4);
+        return view('dashboard')->with('articles', $user->articles()->paginate(4))->with('proposals', $proposals);
     }
 }
