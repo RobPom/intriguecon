@@ -12,7 +12,7 @@ return [
     | Use config('your_key') to get the values.
     |
     | access these variables with these functions
-    | Config::get('constants.company_name')
+    | Config::get('constants.active_con')
     | config('constants.company_name')
     |
     | for blade as well

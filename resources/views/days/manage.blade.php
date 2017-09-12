@@ -79,9 +79,9 @@
             <a href="/timeslots/manage/{{$event->id}}" class="btn btn-default btn-sm pull-right">
                 <i class="material-icons" style="vertical-align: middle;">view_agenda</i>
                 Manage Timeslots
-            </a>                  
+            </a>
+            @endif                  
         </div>
-    @endif
     </div>
 </div>
 @endsection

@@ -13,7 +13,7 @@
     </h1>
     <p>All of our articles. {{count(App\Article::all())}} in total. <p>
 
-    @if(count($articles) > 1)
+    @if(count($articles) > 0)
         {{ $articles->links() }}
         @foreach($articles as $article)
             <div class="well">

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Game;
 use App\User;
 use App\Event;
+use App\Status;
+use Config;
 
 class GamesController extends Controller
 {
@@ -119,7 +121,8 @@ class GamesController extends Controller
     public function show($id)
     {
         $game = Game::find($id);
-        $event = Event::where('active', 1)->first();
+        $event = Event::find(Config::get('constants.active_con'));
+       
         $created_by = User::find($game->created_by);
         return view('games.show')->with('game', $game)->with('created_by', $created_by)->with('event', $event);
     }
