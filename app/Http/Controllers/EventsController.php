@@ -151,11 +151,10 @@ class EventsController extends Controller
         $event = Event::find($id);
         $event->title = $request->input('title');
         $event->description = $request->input('description');
-    
-        $event->save();
         if($request->hasFile('event_image')){
             $event->event_image = $fileNameToStore;
         }
+        $event->save();
         return redirect('/events/'. $event->id)->with('success', 'event updated');
     }
 
