@@ -6,13 +6,16 @@
     <hr>
     <div class="container" style="padding-bottom:20px";>
         <div class="row">
-            <div class="col-lg-6 col-md-4 col-sm-4">
-                <img style="max-width:100%;"src="/storage/article_images/{{$article->article_image}}">
-            </div>
-        
-            <div class="col-lg-6 col-md-8 col-sm-8">
-                <div class="visible-xs"><hr></div>
-                <p>{!!$article->body!!}</p>
+         <div class="visible-xs col-xs-12 ">
+            <img style="width:100%"  src="/storage/article_images/{{$article->article_image}}">
+            <hr>
+         </div>
+            <div class="col-sm-12">
+                <div class="float-left hidden-xs">
+                    <img src="/storage/article_images/{{$article->article_image}}"
+                         width="40%" alt="Image" style="float: left; margin:0 20px 20px 0px;">       
+                </div>
+                 {!!$article->body!!}
             </div>
         </div>
         <hr>
@@ -22,7 +25,7 @@
             <div class="col-sm-12">
                 <span><a href="/articles" class="btn btn-default btn-sm pull-left">
                     <i class="material-icons" style="vertical-align: middle;">keyboard_arrow_left</i>
-                    </a></span>
+                </a></span>
                 
                 @if(!Auth::guest())
                     @if(Auth::user()->id == $article->user_id)

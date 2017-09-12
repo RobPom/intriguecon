@@ -111,7 +111,6 @@
         <div class="panel-default panel">
             <div class="panel-body">
                 <h4><img src='/img/d8-icon.png' > The Games
-                
                     @if(!Auth::guest())
                         @if(Auth::user()->admin)
                             <a href="/schedule/manage/{{$event->id}}" class="btn btn-default btn-xs" style="margin-bottom:6px;">
@@ -121,7 +120,7 @@
                     @endif
                     <div class="pull-right"><a href="/games" class="btn btn-primary">Games List</a></div>
                     </h4><hr>
-                     @if($event->status['active'])
+                     @if($featuredgame !== 0)
                          <h5>Featured</h5>                                                             
                         <div class="media">
                             <a href="/games/{{$featuredgame->id}}" class="list-group-item list-group-item-action">

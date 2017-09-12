@@ -22,7 +22,6 @@ class SchedulesController extends Controller
     public function index($id){
         $event = Event::find($id);
         $timeslots = $event->timeslots;
-        $game_select['0'] = "No Games";
         $games = Game::all();
         if($games) {
             foreach($games as $game){

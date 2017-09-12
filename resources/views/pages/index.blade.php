@@ -90,10 +90,8 @@
             <h3 class="shadowed" style="padding:10px;">Games</h3> 
             <div class="row">
                 <div class="col-sm-12" >
-                @if($games === 'none')
+                
                  <p>All of the games in one place, {{count($games)}} in total!</p>
-
-                @endif
                    
                 </div>
             </div>
@@ -137,7 +135,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 text-center">
-                                <a href="games/" class="btn btn-md btn-primary ">Archive</a>
+                                <a href="articles/" class="btn btn-md btn-primary ">Archive</a>
                             </div>
                         </div>
                     </div>
@@ -152,7 +150,7 @@
                         <div class="col-sm-12">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#">
+                                    <a href="/ahref">
                                     <img src='/img/block-img-games.png' height="60px">
                                     </a>
                                 </div>
@@ -179,7 +177,7 @@
                         <div class="col-sm-12">
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#">
+                                    <a href="volunteer">
                                     <img src='/img/block-img-volunteer.png' height="60px">
                                     </a>
                                 </div>
@@ -190,7 +188,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12 text-center">
-                            <a href="games/" class="btn btn-md btn-primary ">More Info</a>
+                            <a href="volunteer/" class="btn btn-md btn-primary ">More Info</a>
                         </div>
                     </div>  
                 </div>
