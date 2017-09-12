@@ -26,7 +26,7 @@
     <div class="col-lg-4 col-md-4 col-sm-4">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <img class="img-thumbnail" style="max-height:400px; max-width:100%;margin-bottom:10px;"src="/storage/event_images/{{$event->event_image}}">
+                <img class="img-thumbnail" style="max-height:400px; max-width:100%;margin-bottom:10px;"src="/event_images/{{$event->event_image}}">
             </div>
         </div>
         <div class="row">
