@@ -8,7 +8,7 @@
     <div class="col-sm-12 col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading panel-heading-schedule"><h4>
-                {{date( "l", strtotime( $timeslot->start ) )}}
+                {{date( "l", strtotime( $timeslot->date ) )}}
                 {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}  
                 </h4>
             </div>
