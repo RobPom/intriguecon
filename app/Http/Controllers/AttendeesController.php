@@ -71,7 +71,7 @@ class AttendeesController extends Controller
     {
         $attendee = Attendee::find($id);
         $event = Event::find(\Config::get('constants.active_con')); 
-        return view('attendees.create')->with('attendee', $attendee)->with('event', $event);
+        return view('attendees.show')->with('attendee', $attendee)->with('event', $event);
     }
 
     /**
