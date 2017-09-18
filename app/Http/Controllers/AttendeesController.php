@@ -25,7 +25,7 @@ class AttendeesController extends Controller
      */
     public function index()
     {
-        $attendees = Attendee::orderBy('name', 'asc')->paginate(6);
+        $attendees = Attendee::orderBy('name', 'asc');
         return view('attendees.create')->with('attendees' , $attendees);
     }
 
