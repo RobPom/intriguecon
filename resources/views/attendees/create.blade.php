@@ -50,6 +50,7 @@
                 @endforeach
             </tbody>
         </table>
+        {{ $attendees->links() }}
     @else
         <p><em>No attendees added</em></p>
     @endif
