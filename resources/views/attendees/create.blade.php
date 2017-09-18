@@ -23,7 +23,7 @@
 <div class="container">
     <h3>Current</h3>
     @if(count($attendees) > 0)
-        <p>{{count($attendees)}} attendees in total</p>            
+        <p>{{$count}} attendees in total</p>            
         <table class="table table-striped">
             <thead>
             <tr>

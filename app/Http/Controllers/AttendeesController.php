@@ -26,7 +26,8 @@ class AttendeesController extends Controller
     public function index()
     {
         $attendees = Attendee::orderBy('name', 'asc')->paginate(20);
-        return view('attendees.create')->with('attendees' , $attendees);
+        $count = count(Attendee::all());
+        return view('attendees.create')->with('attendees' , $attendees)->with('count', $count);;
     }
 
     /**
@@ -37,7 +38,8 @@ class AttendeesController extends Controller
     public function create()
     {
         $attendees = Attendee::orderBy('name', 'asc')->paginate(20);
-        return view('attendees.create')->with('attendees' , $attendees);
+        $count = count(Attendee::all());
+        return view('attendees.create')->with('attendees' , $attendees)->with('count', $count);
     }
 
     /**
@@ -70,8 +72,9 @@ class AttendeesController extends Controller
     public function show($id)
     {
         $attendee = Attendee::find($id);
+        $count = count(Attendee::all());
         $event = Event::find(\Config::get('constants.active_con')); 
-        return view('attendees.show')->with('attendee', $attendee)->with('event', $event);
+        return view('attendees.show')->with('attendee', $attendee)->with('event', $event)->with('count', $count);
     }
 
     /**
