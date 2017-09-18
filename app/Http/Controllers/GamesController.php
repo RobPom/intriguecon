@@ -214,4 +214,16 @@ class GamesController extends Controller
         $game->delete();
         return redirect('/games')->with('success', 'Game Removed');
     }
+
+
+     /**
+     * Display a listing of the games attendees.
+     *
+     * @return \Illuminate\Http\Response
+     */
+     public function attendance($id){
+        $game = Game::find($id);
+        $event = Event::find(Config::get('constants.active_con'));
+        return view('games.attendance')->with('game', $game)->with('event', $event);
+    }
 }

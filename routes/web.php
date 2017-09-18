@@ -18,6 +18,8 @@ Route::get('/volunteer', 'PagesController@volunteer');
 Route::get('/code-of-conduct', 'PagesController@code_of_conduct');
 Route::get('/reserve', 'PagesController@reserve');
 
+Route::get('/game/{id}/attendance', 'GamesController@attendance');
+
 Route::resource('articles', 'ArticlesController');
 Route::resource('games', 'GamesController');
 Route::resource('events', 'EventsController');
@@ -49,4 +51,8 @@ Route::post('/schedule/add', 'SchedulesController@store');
 Route::post('/schedule/remove', 'SchedulesController@remove');
 Route::get('/schedule/show/{id}', 'SchedulesController@show');
 Route::get('/schedule/{event}/timeslot/{timeslot}', 'TimeslotsController@schedule');
+
 Route::get('/dashboard', 'DashboardController@index');
+Route::post('/attendee/schedule/add', 'AttendeeScheduleController@store');
+Route::put('/attendee/schedule/{id}', 'AttendeeScheduleController@update');
+Route::post('/attendee/schedule/{id}/remove', 'AttendeeScheduleController@remove');

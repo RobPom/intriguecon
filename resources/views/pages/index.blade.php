@@ -8,7 +8,7 @@
         <div class="col-sm-8 col-md-10 col-lg-10">
              <p class="lead quote hidden-xs"><em>Glory is fleeting. Obscurity lasts forever.</em></p>
             <hr class="hidden-xs">
-            <p class="header-p" style="font-weight: medium;">Edmonton Alberta's ultimate tabletop roleplaying experience 
+            <p class="header-p" style="font-weight: medium;">Edmonton's ultimate tabletop roleplaying experience 
             returns October 13 - 15 at the Queen Alexandra Community League Hall.</p>
             <p class="lead ">
                 <a class="btn btn-primary btn-md" href="/reserve" role="button">Register</a>

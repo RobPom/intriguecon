@@ -7,7 +7,8 @@
 <h2>Register Now!</h2>
     <div class="row">
         <div class="col-xs-12">
-            <p>Take advantage of early registration. Pay before September 19th, 2017 and save $5 on registration. </p>
+            <p>Take advantage of early registration. Register before October 2nd, 2017 and pay only $25. </p>
+            
         </div>
     </div>
     <div class="row">

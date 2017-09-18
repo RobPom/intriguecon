@@ -26,6 +26,16 @@
                                 <div class="media-body media-middle">
                                     <strong class="media-heading">{{$game->name}}</strong>
                                 </div>
+                                <?php $gametimeslot = App\GameTimeslot::where('timeslot_id', $timeslot->id)
+                                    ->where('game_id', $game->id)
+                                    ->first();
+                                ?>
+                                <div class="media-body media-right text-right">
+                                    <span class="badge badge-primary ">
+                                        <i class='material-icons' style='vertical-align: middle; font-size: 18px;'>event_seat</i>
+                                        <span style='vertical-align: bottom; font-size: 16px;'> {{$game->max - count($gametimeslot->attendees)}}</span> 
+                                    </span>
+                                </div>
                             </a>
                         </div>
                         @endforeach

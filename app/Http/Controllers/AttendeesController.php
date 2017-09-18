@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Attendee;
+use App\Event;
 
 class AttendeesController extends Controller
 {   
@@ -68,8 +69,9 @@ class AttendeesController extends Controller
      */
     public function show($id)
     {
-        $attendee = Attendee::find($id);    
-        return view('attendees.show')->with('attendee', $attendee);
+        $attendee = Attendee::find($id);
+        $event = Event::find(\Config::get('constants.active_con')); 
+        return view('attendees.show')->with('attendee', $attendee)->with('event', $event);
     }
 
     /**

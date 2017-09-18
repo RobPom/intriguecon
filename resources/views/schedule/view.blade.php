@@ -17,7 +17,7 @@
                                 <a href="/schedule/{{$event->id}}/timeslot/{{$timeslot->id}}" class="list-group-item ">
                                     <strong style="display: inline-block;">{{$timeslot->name}} - </strong>
                                     {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}
-                                    <span class="badge ">{{count($timeslot->games)}}</span>
+                                    <span class="badge ">{{count($timeslot->games)}} Games</span>
                                 </a>
                             @else
                                  <a href="#" class="list-group-item disabled">

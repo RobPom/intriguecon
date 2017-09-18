@@ -23,7 +23,8 @@
             <strong>Advisory:</strong> {!!$game->advisory!!}
         </div>
         <div class="col-sm-6 pull-right text-right">
-            <p>Seats #/#</p>
+            <i class='material-icons' style='vertical-align: middle; font-size: 18px;'>event_seat</i>
+            <strong>Maximum Players:</strong> {!!$game->max!!}
         </div>  
     </div> 
     <hr>
@@ -35,6 +36,11 @@
             @if(!Auth::guest())
                 @if(Auth::user()->admin)           
                     <div class="pull-right">
+                        
+                            <a href="/game/{{$game->id}}/attendance" class="btn btn-info btn-sm" style="margin-bottom:6px;">
+                                <i class="material-icons" style="vertical-align: middle;">event_seat</i>
+                            </a>
+                       
                         <a href="/games/{{$game->id}}/edit" class="btn btn-default btn-sm" style="margin-bottom:6px;">
                                 <i class="material-icons" style="vertical-align: middle;">mode_edit</i>
                         </a>
@@ -57,9 +63,20 @@
                         <a href="/schedule/1/timeslot/{{$timeslot->id}}" class="list-group-item ">
                             <h4 style="display: inline-block;">{{$timeslot->name}} - </h4>
                             {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}
-                            <span class="badge ">#</span>
+
+                            <?php $gametimeslot = App\GameTimeslot::where('timeslot_id', $timeslot->id)
+                                ->where('game_id', $game->id)
+                                ->first();
+                            ?>
+                            <span class="badge">
+                                <i class='material-icons' style='vertical-align: middle; font-size: 18px;'>event_seat</i>
+                                <span style='vertical-align: bottom; font-size: 16px;'> {{$game->max - count($gametimeslot->attendees)}}</span> 
+                            </span>
                         </a>
+                        
+                       
                     @endif
+                    
                 @endforeach
             @else
                 <div class="col-xs-12 bg-info" style="padding-top:20px;padding-bottom:20px;">

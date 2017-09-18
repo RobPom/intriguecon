@@ -36,7 +36,7 @@
                             <li><a href="/events/{{ config('constants.active_con') }}">Info</a></li>
                             <li><a href="/locations/{{ config('constants.active_con') }}">Location</a></li>
                             <li><a href="/schedule/show/{{ config('constants.active_con') }}">Schedule</a></li>
-                            <li></li>
+                            <li><a href="/reserve">Register</a></li>
                         </ul>
                     </li>
          

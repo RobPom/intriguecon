@@ -145,7 +145,13 @@ a:hover{
 }
 
 .panel-default > .panel-heading-schedule {
-  background: #756767; 
+  background: #2a88bd; 
   color: #fff;
   text-shadow: 1px 1px 4px #0C0000;
+}
+
+.badge-primary {
+  background-color: #3097D1;
+  font-size: 18px;
+  padding: 0.4em 0.2em;
 }
