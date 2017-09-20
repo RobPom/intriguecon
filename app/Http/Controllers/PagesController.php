@@ -17,22 +17,26 @@ class PagesController extends Controller
     }
 
     public function about(){
-        $title = 'About Us';
-        return view('pages.about')->with('title', $title);
+        return view('pages.about');
     }
 
     public function volunteer(){
-        $title = 'Volunteer';
-        return view('pages.volunteer')->with('title', $title);
+       return view('pages.volunteer');
     }
 
     public function code_of_conduct(){
-        $title = 'Code of Conduct';
-        return view('pages.code-of-conduct')->with('title', $title);
+        return view('pages.code-of-conduct');
     }
 
     public function reserve(){
-        $title = 'Register';
-        return view('pages.reserve')->with('title', $title);
+        return view('pages.reserve');
+    }
+
+    public function buttons(){
+        return view('pages.buttons');
+    }
+
+    public function playset(){
+        return view('pages.playset');
     }
 }
