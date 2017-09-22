@@ -4,7 +4,6 @@
             <div class="col-sm-4">
                 <ul class="list-inline">
                     <li><a href="https://www.facebook.com/groups/663587420414716/" class="social-facebook"></a></li>
-                    <li><a href="#" class="social-google"></a></li>
                     <li><a href="https://twitter.com/intriguecon" class="social-twitter"></a></li>
                 </ul>
               

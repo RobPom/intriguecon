@@ -14,6 +14,33 @@
                     <div class="panel-body">
                         <h5>{{$event->title}} | {{count($attendees)}} attendees</h5>
                         <a href='/attendees'>View All</a>
+                        <hr>
+                        <h5>Scheduling</h5>
+                        
+                            @foreach($event->timeslots as $timeslot)
+                                <div class="list-group">
+                                    <a href="/schedule/{{$event->id}}/timeslot/{{$timeslot->id}}" class="list-group-item">
+                                        <div class='row'>
+                                            <div class='col-sm-4'>
+                                                <strong>{{$timeslot->name}}</strong>
+                                            </div>
+                                            <div class='col-sm-4'>
+                                                {{count($timeslot->games)}} Games
+                                            </div>
+                                            <div class='col-sm-4'>
+                                                <?php $counter = 0; ?>
+                                                @foreach($timeslot->games as $game)
+                                                    <?php $counter += $game->max; ?>
+                                                @endforeach
+                                                <i class='material-icons' >event_seat</i> {{$counter}}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                   
+                            @endforeach
+                   
+                        <a class='btn btn-large btn-primary pull-right' href="/schedule/manage/{{Config::get('constants.active_con')}}">Manage Schedule</a>
                     </div>
                 </div>
             </div>

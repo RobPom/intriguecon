@@ -7,10 +7,22 @@
 <div class="row">
     <div class="col-sm-12 col-md-6">
         <div class="panel panel-default">
-            <div class="panel-heading panel-heading-schedule"><h4>
+            <div class="panel-heading panel-heading-schedule">
+            <h4 style='display:inline-block'>
                 {{date( "l", strtotime( $timeslot->date ) )}}
                 {{date( "g:ia", strtotime( $timeslot->start ) )}} to {{date( "g:ia", strtotime( $timeslot->end ) )}}  
-                </h4>
+            </h4>
+            @if (!Auth::guest())
+                @if(Auth::user()->admin)
+                    @if(count($timeslot->games) > 0 )
+                        <?php $counter = 0; ?>
+                        @foreach($timeslot->games as $game)
+                            <?php $counter += $game->max; ?>
+                        @endforeach
+                        <h4 class='pull-right'><i class='material-icons' >event_seat</i> {{$counter}}</h4>
+                    @endif
+                 @endif
+             @endif
             </div>
 
             <div class="panel-body">

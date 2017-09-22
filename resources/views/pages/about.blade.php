@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>{{$title}}</h1>
+<h1>About Us</h1>
 <div class="row" style="padding-bottom:40px;">
     <div class="col-xs-12">
         <p>Hi there, apparently for some reason you’d like to know more about us. It takes all sorts I suppose.</p>
