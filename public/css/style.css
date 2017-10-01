@@ -6,7 +6,7 @@ html {
   }
   body {
     /* Margin bottom by footer height */
-    margin-bottom: 160px;
+    margin-bottom: 200px;
 
   }
   .footer {
@@ -15,7 +15,7 @@ html {
     bottom: 0;
     width: 100%;
     /* Set the fixed height of the footer here */
-    height: 160px;
+    height: 200px;
     background-color: #333;
     box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.65);
   }
@@ -185,3 +185,7 @@ a:hover{
   text-shadow: 1px 1px 2px #2C2A2A !important;
 }
 
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

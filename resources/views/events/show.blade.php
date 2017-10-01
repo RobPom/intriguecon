@@ -33,7 +33,7 @@
             <div class="col-sm-12">
                 <div class="panel-default panel">
                     <div class="panel-body">
-                        <h4><i class="material-icons" style="vertical-align: middle;">location_on</i> location
+                        <h4><i class="material-icons">location_on</i> location
                             @if(!Auth::guest())
                                 @if(Auth::user()->admin)
                                      <a href="/locations/create" class="btn btn-default btn-xs" style="margin-bottom:6px;">

@@ -213,6 +213,12 @@
                             style="font-family: 'Fjalla One', sans-serif;font-size:32px;">HAZARD GAMING
                         </a>
                     </div>
+                    <div class="col-sm-4 col-lg-3">
+                        <a href="https://www.evilhat.com/home/" 
+                            title="Evil Hat Productions | Turning Passion into Great Games!">
+                            <img class="img-responsive" src="img/evilhat-logo.gif" alt="Evil Hat Productions">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

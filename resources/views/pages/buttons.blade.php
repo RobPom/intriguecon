@@ -22,7 +22,12 @@
 		
 			<td>
 				<a href="#" title="<b>Original 31</b>" data-toggle="popover" data-trigger="hover" 
-				data-html="true" data-placement="auto" data-content="<div><p>This was our first button. Handed out in our second year, it identifies a wearer as one of the 31 attendees of the very first IntrigueCon; one of the Original 31.</p><p>The event was held in the Lansdowne Community League Hall.</div>"><img src="/img/btns/2013_o31_s.png"></a>
+					data-html="true" data-placement="auto" 
+					data-content="<div><p>This was our first button. Handed out in our second year, it identifies a wearer 
+									as one of the 31 attendees of the very first IntrigueCon; one of the Original 31.</p>
+									<p>The event was held in the Lansdowne Community League Hall.</div>">
+					<img src="/img/btns/2013-31.png">
+				</a>
 			</td>
 		</tr>
 		

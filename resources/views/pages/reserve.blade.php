@@ -7,7 +7,7 @@
 <h2>Register Now!</h2>
     <div class="row">
         <div class="col-xs-12">
-            <p>Take advantage of early registration. Register before October 2nd, 2017 and pay only $25. </p>
+            <p>Convention passes available for $30</p>
             
         </div>
     </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Game;
+use Storage;
 use DB;
 
 class PagesController extends Controller
@@ -38,5 +39,15 @@ class PagesController extends Controller
 
     public function playset(){
         return view('pages.playset');
+    }
+
+    public function swapmeet(){
+        return view('pages.swapmeet');
+    }
+
+    public function test(){
+
+        $files = Storage::files('public/game_images');
+        return view('pages.test')->with('files', $files);
     }
 }

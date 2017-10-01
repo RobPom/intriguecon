@@ -6,10 +6,8 @@
                     <li><a href="https://www.facebook.com/groups/663587420414716/" class="social-facebook"></a></li>
                     <li><a href="https://twitter.com/intriguecon" class="social-twitter"></a></li>
                 </ul>
-              
             </div>
-            <div class="col-sm-4">
-            </div>
+            <div class="col-sm-4"></div>
             <div class="col-sm-4">
                 <ul class="list-unstyled ">                    
                     <li class="footer-menu"><a href="/about">About Us</a><br></li>
@@ -18,8 +16,12 @@
                         <li class="footer-menu"><a href="{{ route('login') }}">Login</a></li>
                     {{--   <li><a href="{{ route('register') }}">Register</a></li>  --}}
                     @else
-                        <li class="footer-menu"><a href="/dashboard">Dashboard</a></li>
-                        <li class="footer-menu"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+
+                        <li class="footer-menu">
+                            <a href="/dashboard">Dashboard</a>
+                        </li>
+                        
+                        <li class="footer-menu"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
@@ -28,7 +30,4 @@
             </div>
         </div>
     </div>
-
-
-     
 </footer>
