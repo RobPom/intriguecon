@@ -7,7 +7,7 @@
 <h2>Register Now!</h2>
     <div class="row">
         <div class="col-xs-12">
-            <p>Convention passes available for $30</p>
+            Take advantage of early registration. Register before October 4th, 2017 and pay only $25. <
             
         </div>
     </div>
@@ -28,7 +28,7 @@
         <div class="col-xs-12">
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="YV8R5QYDZFC4A">
+                <input type="hidden" name="hosted_button_id" value="T965A2MF7PXNW"> {{--   value="YV8R5QYDZFC4A"  --}}
                 <input type="image" src="img/paypal.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
             </form>

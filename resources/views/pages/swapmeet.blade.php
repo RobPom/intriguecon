@@ -27,8 +27,13 @@
                    <h4 class='display-4' style='margin: 0px;'><i class="material-icons md-24">info_outline</i> Note </h4>
                 </div>
                 <div class='panel-body bg-info text-white' style='padding-top: 0px;'>
-                    <p>The exact nature of the transactions is between you and the vendor but must fall within the confines of Canadian and Alberta law.</p>
-                    <p>Additionally the principles of <abbr title="Buyer Beware" class="initialism">Caveat Emptor</abbr> and <abbr title="Seller Take Care" class="initialism">Caveat Venditor</abbr> apply.</p> 
+                    <p>
+                    When buying and selling items at the swapmeet all transactions must fall within the law e.g. no selling dwarven ale to minors. 
+                    We also suggest you carefully research the value of any items you’re selling/swapping.</p>
+                    <p>Additionally it’d be great if you’d check that any games are complete or that you say “I don’t know” when asked.</P>
+                    <p> As a purchaser be sure to check you’re buying what you think you’re buying: a seller can’t read your mind.
+                    
+                    </p> 
                     <p><em>IntrigueCon does not endorse nor will be involved directly with any transactions.</em></p>
                 </div>
             </div>
