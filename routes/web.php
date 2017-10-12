@@ -60,3 +60,6 @@ Route::get('/dashboard', 'DashboardController@index');
 Route::post('/attendee/schedule/add', 'AttendeeScheduleController@store');
 Route::put('/attendee/schedule/{id}', 'AttendeeScheduleController@update');
 Route::post('/attendee/schedule/{id}/remove', 'AttendeeScheduleController@remove');
+
+Route::get('/billboard/schedule', 'BillboardController@index');
+Route::get('/billboard/schedule/{id}', 'BillboardController@show');

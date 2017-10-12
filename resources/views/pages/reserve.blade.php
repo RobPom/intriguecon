@@ -7,7 +7,7 @@
 <h2>Register Now!</h2>
     <div class="row">
         <div class="col-xs-12">
-            Registration is $30.
+            <p>Registration is $30.</p>
         </div>
     </div>
     <div class="row">
