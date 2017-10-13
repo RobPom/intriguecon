@@ -1,0 +1,122 @@
+html { 
+    background: url(/img/billboard-schedule-background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h1 {
+    color: white;
+    text-shadow: black 0.02em 0.02em 0.1em;
+}
+
+/* Game Cards */
+.center-cropped {
+    object-fit: none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 100px;
+    width: 100%;
+  }
+
+.card game {
+    width:300px;
+}
+.card.small {
+    height:270px;
+}
+.card-title game {
+    padding:10px !important;
+    height: 100px;
+    width: 100%;
+    box-shadow: inset 0px 0px 600px rgba(0, 0, 0, 0.80);
+}
+.card .card-action {
+    padding: 8px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.8);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 22px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* game modal */
+.modal {
+    height: 100% !important;
+    width: 80% !important;
+}
+.game-image {
+    object-fit: fill;
+    width: 100%;
+  }
+
+.day {
+    height:400px;
+    background-color:rgba(135,206,250,0.6);
+}
+.row {
+    padding-bottom: 0px !important;
+}
+.session {
+    padding-left: 5px;
+    padding-right: 5px;
+    height:80px;
+}
+
+h1 {
+    color: white;
+    text-shadow: black 0.02em 0.02em 0.1em;
+}
+.card day .card-content {
+    padding: 10px;
+}
+ .card day .card-title {
+    font-size:2em;
+}
+.session-info {
+    font-size:1.2em;
+}
