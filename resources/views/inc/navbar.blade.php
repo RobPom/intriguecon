@@ -27,7 +27,7 @@
                 <li><a href="/articles">Articles</a></li>
                 <li><a href="/games">Games</a></li>
          
-                    <li class="dropdown">
+                    {{--  <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             Convention<span class="caret"></span>
                         </a>
@@ -38,7 +38,7 @@
                             <li><a href="/schedule/show/{{ config('constants.active_con') }}">Schedule</a></li>
                             <li><a href="/reserve">Register</a></li>
                         </ul>
-                    </li>
+                    </li>  --}}
          
             </ul>
         </div>
