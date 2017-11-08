@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{--  <div class="jumbotron">
+<div class="jumbotron">
     <h1 class="display-3">Intrigue<span style="color:yellow">Con 2017</span></h1>
     <div class="row">
         <div class="col-sm-8 col-md-10 col-lg-10">
@@ -16,7 +16,7 @@
             </p>
         </div>
     </div>
-</div>  --}}
+</div>
 
     <div class="row" style="margin-top:20px;">
         <div class="col-sm-12">

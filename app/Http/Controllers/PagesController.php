@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use App\Article;
 use App\Game;
@@ -43,6 +43,30 @@ class PagesController extends Controller
 
     public function swapmeet(){
         return view('pages.swapmeet');
+    }
+
+    public function gallery(){
+
+        $files = File::files('img/ic2017');
+        $images = [];
+        foreach ($files as $file)
+        {
+            $images[] = pathinfo($file);
+            //echo substr($file, 4) . '<br>';
+        }
+        return view('pages.gallery')->with('images', $images);
+
+    }
+
+    public function recap(){
+        $files = File::files('img/ic2017');
+        $images = [];
+        foreach ($files as $file)
+        {
+            $images[] = pathinfo($file);
+            //echo substr($file, 4) . '<br>';
+        }
+        return view('pages.recap')->with('images', $images);
     }
 
     public function test(){

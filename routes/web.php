@@ -21,6 +21,9 @@ Route::get('/buttons', 'PagesController@buttons');
 Route::get('/playset', 'PagesController@playset');
 Route::get('/test', 'PagesController@test');
 Route::get('/swapmeet', 'PagesController@swapmeet');
+Route::get('/2017-recap', 'PagesController@recap');
+Route::get('/2017-gallery', 'PagesController@gallery');
+
 
 Route::get('/game/{id}/attendance', 'GamesController@attendance');
 
