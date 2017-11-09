@@ -7,7 +7,7 @@
     <div class="col-lg-12">
         <h1 class="page-header">2017 Gallery</h1>
             @foreach($images as $image)
-            <div class="col-md-4 col-xs-6">
+            <div class="col-md-4 col-sm-6 ">
                 <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="2017 Fall Convention" data-caption="" data-image="{{$image['dirname']}}\{{$image['basename']}}" data-target="#image-gallery">
                     <img class="img-thumb" src="{{$image['dirname']}}\{{$image['basename']}}" >
                 </a>
