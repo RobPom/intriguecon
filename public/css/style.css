@@ -73,9 +73,11 @@ div.col-xs-12.col-sm-6.responsive-align{
 .jumbotron {
   font-family: 'Raleway', sans-serif;
   margin-bottom: 0px;
-  background: url(/img/lil_nap.png) right bottom no-repeat, url(/img/paper_texture_02.jpg) no-repeat ;
+  /*background: url(/img/lil_nap.png) right bottom no-repeat, url(/img/paper_texture_02.jpg) no-repeat ;*/
+  background:  url(/img/roundup.jpg) no-repeat ;
+  background-position:50%30%;
   box-shadow: inset 0px 0px 600px rgba(0, 0, 0, 0.80);
-  background-size: 200px, cover;
+  background-size: cover;
   color: white;
   text-shadow: black 0.1em 0.1em 0.1em;
 }

@@ -3,16 +3,15 @@
 @section('content')
 
 <div class="jumbotron">
-    <h1 class="display-3">Intrigue<span style="color:yellow">Con 2017</span></h1>
+    <h1 class="display-3">Intrigue<span style="color:yellow">Con 2017</span> Recap</h1>
     <div class="row">
         <div class="col-sm-8 col-md-10 col-lg-10">
-             <p class="lead quote hidden-xs"><em>Glory is fleeting. Obscurity lasts forever.</em></p>
             <hr class="hidden-xs">
-            <p class="header-p" style="font-weight: medium;">Edmonton's ultimate tabletop roleplaying experience 
-            returns October 13 - 15 at the Queen Alexandra Community League Hall.</p>
+            <p class="header-p" style="font-weight: medium;">Reflecting on the 2017 Convention, our plans going forward, some doodles and <em>An Intriguing Fiasco...</em>
+
+            </p>
             <p class="lead ">
-                <a class="btn btn-primary btn-md" href="/reserve" role="button">Register</a>
-                <a class="btn btn-primary btn-md" href="/events/1" role="button">Learn more</a>  
+                <a class="btn btn-primary btn-md" href="/2017-recap" role="button">Read More</a>
             </p>
         </div>
     </div>
