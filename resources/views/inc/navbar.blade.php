@@ -39,7 +39,6 @@
                             <li><a href="/reserve">Register</a></li>
                         </ul>
                     </li>  --}}
-         
             </ul>
         </div>
     </div>

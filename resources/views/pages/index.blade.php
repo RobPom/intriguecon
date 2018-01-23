@@ -74,7 +74,7 @@
     </div>
 
     <div class="row row-eq-height hidden-xs"  style="margin-bottom:100px; margin-top:50px;">
-        <div class="col-sm-4 col-xs-12 text-center">     
+        <div class="col-sm-6 col-xs-12 text-center">     
             <img src='/img/block-img-article.png' height="80px">
             <br>                                    
             <h3 class="shadowed" style="padding:10px;">Articles</h3> 
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="col-sm-4 col-xs-12 text-center">     
+       <!--  <div class="col-sm-4 col-xs-12 text-center">     
             <img src='/img/block-img-games.png' height="80px">
             <br>                                    
             <h3 class="shadowed" style="padding:10px;">Games</h3> 
@@ -106,9 +106,9 @@
                     <a href="games/" class="btn btn-md btn-primary ">All Games</a>
                 </div>         
             </div>
-        </div>
+        </div> -->
 
-        <div class="col-sm-4 col-xs-12 text-center">     
+        <div class="col-sm-6 col-xs-12 text-center">     
             <img src='/img/block-img-volunteer.png' height="80px">
             <br>                                    
             <h3 class="shadowed" style="padding:10px;">Volunteer</h3> 
@@ -149,7 +149,7 @@
             </div>
         </div>
 
-        <div class="col-xs-12">
+       <!--  <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="row">
@@ -174,7 +174,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="col-xs-12">
             <div class="panel panel-default">
