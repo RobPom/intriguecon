@@ -45,6 +45,10 @@ class PagesController extends Controller
         return view('pages.swapmeet');
     }
 
+    public function complete(){
+        return view('pages.registration-complete');
+    }
+
     public function gallery(){
 
         $files = File::files('img/ic2017');
@@ -70,7 +74,6 @@ class PagesController extends Controller
     }
 
     public function test(){
-
         $files = Storage::files('public/game_images');
         return view('pages.test')->with('files', $files);
     }

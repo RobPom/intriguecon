@@ -17,6 +17,7 @@ Route::get('/about', 'PagesController@about');
 Route::get('/volunteer', 'PagesController@volunteer');
 Route::get('/code-of-conduct', 'PagesController@code_of_conduct');
 Route::get('/reserve', 'PagesController@reserve');
+Route::get('/registration-complete', 'PagesController@complete');
 Route::get('/buttons', 'PagesController@buttons');
 Route::get('/playset', 'PagesController@playset');
 Route::get('/test', 'PagesController@test');

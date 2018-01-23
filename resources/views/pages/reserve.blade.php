@@ -7,7 +7,11 @@
 <h2>Register Now!</h2>
     <div class="row">
         <div class="col-xs-12">
-            <p>Registration is $30.</p>
+
+                <h1 class="display-3" >Intrigue <span style="color:yellow">Spring Mini Con</span>
+                </h1>
+
+            <p>Only $20 for both days!</p>
         </div>
     </div>
     <div class="row">
@@ -27,7 +31,7 @@
         <div class="col-xs-12">
             <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                 <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="YV8R5QYDZFC4A">
+                <input type="hidden" name="hosted_button_id" value="T2D6W8S2BJ4R6">
                 <input type="image" src="img/paypal.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
             </form>

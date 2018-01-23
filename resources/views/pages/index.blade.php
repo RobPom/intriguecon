@@ -2,13 +2,20 @@
 
 @section('content')
 
-<div class="jumbotron">
-    <h1 class="display-3">Intrigue<span style="color:yellow">Con 2017</span> Recap</h1>
+<div class="item jumbotron center spring" style="text-align: center;">
+    <h1 class="display-3" >Intrigue<br>
+        <span class="small" style="color:yellow">Spring Mini Con</span>
+    </h1>
+    <p class="text-center">May 4th & 5th, 2018</p>
+    <a class="btn btn-success" href="/reserve" role="button">Registration Open!</a>         
+</div>
+<br>
+<div class="jumbotron roundup">
+    <h1 class="display-3"><span style="color:yellow">Con 2017</span> Recap</h1>
     <div class="row">
         <div class="col-sm-8 col-md-10 col-lg-10">
             <hr class="hidden-xs">
             <p class="header-p" style="font-weight: medium;">Reflecting on the 2017 Convention, our plans going forward, some doodles and <em>An Intriguing Fiasco...</em>
-
             </p>
             <p class="lead ">
                 <a class="btn btn-primary btn-md" href="/2017-recap" role="button">Read More</a>
@@ -225,9 +232,7 @@
 
 @endsection
 
-
 <style>
-
 .home-block {
     margin-bottom: 80px; 
 }

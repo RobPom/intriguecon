@@ -1,60 +1,62 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
-    position: relative;
-    min-height: 100%;
-  }
-  body {
-    /* Margin bottom by footer height */
-    margin-bottom: 200px;
+  position: relative;
+  min-height: 100%;
+}
 
-  }
-  .footer {
-    position: absolute;
-    padding: 20px;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 200px;
-    background-color: #333;
-    box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.65);
-  }
-  
-  .footer-menu a{
-    font-size: 14px;
-    
-    color: white;
-  }
-  .footer-menu a:hover {
-    color: #E5DCDC;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 200px;
 
-  }
+}
 
-  body {
-    font-family: 'Roboto', sans-serif;
-    color: #202020;
-  }
+.footer {
+  position: absolute;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 200px;
+  background-color: #333;
+  box-shadow: inset 0px 0px 200px rgba(0, 0, 0, 0.65);
+}
 
-  .yellow {color: yellow;}
-  .white {color:white;}
+.footer-menu a{
+  font-size: 14px;
+  color: white;
+}
 
-  a.navbar-brand{
-    font-family: 'Raleway', sans-serif;
-    font-size: 22px;
-    font-weight: 300;
-    padding: 12px 0 0 20px;
-    text-shadow: 1px 1px 4px #F9F3F3;
-  }
-  h3 {
-    margin-top: 0px;
-  }
+.footer-menu a:hover {
+  color: #E5DCDC;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #202020;
+}
+
+.yellow {color: yellow;}
+.white {color:white;}
+
+a.navbar-brand{
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  padding: 12px 0 0 20px;
+  text-shadow: 1px 1px 4px #F9F3F3;
+}
+
+h3 {
+  margin-top: 0px;
+}
   
 .short-desc {
-
   font-size: 1.2em;
   font-weight: 500; 
   line-height: 1.4em;
 }
+
 .material-icons{
   vertical-align: middle;
 }
@@ -74,33 +76,52 @@ div.col-xs-12.col-sm-6.responsive-align{
   font-family: 'Raleway', sans-serif;
   margin-bottom: 0px;
   /*background: url(/img/lil_nap.png) right bottom no-repeat, url(/img/paper_texture_02.jpg) no-repeat ;*/
-  background:  url(/img/roundup.jpg) no-repeat ;
-  background-position:50%30%;
   box-shadow: inset 0px 0px 600px rgba(0, 0, 0, 0.80);
   background-size: cover;
   color: white;
   text-shadow: black 0.1em 0.1em 0.1em;
 }
 
+.spring-register-button {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; /* Green */
+}
+
+.spring {
+  background:  url(/img/spring_bg.jpg) no-repeat ;
+  background-position:50%40%;
+}
+
+.roundup {
+  background:  url(/img/roundup.jpg) no-repeat ;
+  background-position:50%40%;
+}
+
 .jumbotron h1{
   font-weight: 600;
-
 }
 
 .jumbotron .quote {
   font-weight: 300;
+}
+
+.insert {
+  background:  url(/img/roundup.jpg) no-repeat ;
+  background-position:50%40%;
 
 }
 
 .jumbotron p{
   font-weight: 600;
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-shadow: 1px 1px 4px #0C0000;
 }
 
 h3.shadowed {
   text-shadow: 1px 1px 2px #5F5959 !important;
 }
+
 h1 {
   text-shadow: 1px 1px 2px #5F5959 !important;
 }
@@ -111,7 +132,6 @@ h1 {
   top: 0px;
   z-index: -1;
 }
-
 
 .row.equal {
   display: flex;
@@ -170,9 +190,11 @@ a:hover{
 .dice-text {
     padding-left:1em;
 }
+
 .bottom-margin {
     margin-bottom: 1em;
 }
+
 .left-margin {
     margin-left: 1em;
     margin-bottom: 0.4em;
