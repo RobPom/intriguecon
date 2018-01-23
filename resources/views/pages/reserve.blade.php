@@ -17,14 +17,10 @@
     <div class="row">
         <div class="col-xs-12">
             <h3>Payment Instructions</h3>
-            <ul class="list-unstyled">
-                <li style="padding:10px;"><strong>1. Click the Pay Pal button below.</strong>
-                <p>This takes you to our PayPal shopping cart.</p>
-                <li style="padding:10px;"><strong>2. Select the number of registrations.</strong>
-                <li style="padding:10px;"><strong>3. Wait for confirmation.</strong>
-                <p>You will receive a confirmation email from our registrar within 24 hours. 
-                The confirmation email will have additional instructions on how to sign up for games.</p>
-              <p>If you do not receive a confirmation email within 24 hours  please contact us at  intrigue@hazardgaming.com.</p>
+            <p>Select the number of Attendees from the dropdown, then click "Pay with PayPal". </p>
+            <p>You will receive a confirmation email from our registrar within 24 hours after registering. 
+            The confirmation email will have additional instructions on how to sign up for games.</p>
+            <p>If you do not receive a confirmation email within 24 hours  please contact us at  intrigue@hazardgaming.com.</p>
         </div>
     </div>
     <hr>

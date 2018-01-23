@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav navbar-right">
                 
                 <li><a href="/articles">Articles</a></li>
-                <li><a href="/games">Games</a></li>
+                <!-- <li><a href="/games">Games</a></li> -->
          
                     {{--  <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
