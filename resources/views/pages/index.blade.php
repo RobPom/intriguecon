@@ -7,7 +7,8 @@
         <span class="small" style="color:yellow">Spring Mini Con</span>
     </h1>
     <p class="text-center">May 4th & 5th, 2018</p>
-    <a class="btn btn-success" href="/reserve" role="button">Registration Open!</a>         
+    <a class="btn btn-primary" href="/events/{{ config('constants.active_con') }}" role="button">Read More</a> 
+    <a class="btn btn-success" href="/reserve" role="button">Register Now!</a>  
 </div>
 <br>
 <div class="jumbotron roundup">

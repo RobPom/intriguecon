@@ -11,19 +11,16 @@
                 <h1 class="display-3" >Intrigue <span style="color:yellow">Spring Mini Con</span>
                 </h1>
 
-            <p>Only $20 for both days!</p>
+            
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <h3>Payment Instructions</h3>
+            <h3>Regular Attendance</h3>
+            <p><em>Only $20 for both days!</em></p>
             <p>Select the number of Attendees from the dropdown, then click "Pay with PayPal". </p>
-            <p>You will receive a confirmation email from our registrar within 24 hours after registering. 
-            The confirmation email will have additional instructions on how to sign up for games.</p>
-            <p>If you do not receive a confirmation email within 24 hours  please contact us at  intrigue@hazardgaming.com.</p>
         </div>
     </div>
-    <hr>
     <div class="row">
         <div class="col-xs-12">
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -41,15 +38,36 @@
                     <input type="image" src="img/paypal.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
                     </form>
-                    <br>
-            <!-- <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="T2D6W8S2BJ4R6">
-                <input type="image" src="img/paypal.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
-            </form> -->
+
         </div>
     </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Children's Session</h3>
+            <p>We are hosting a Children's open game session running all day Saturday! </p>
+            <p>For $15 This registration option entitles one child to play at a continuous (join in any time) D&D table running from 10am until 7pm on Saturday</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="JETT3SP6C6R9E">
+                <input type="image" src="img/paypal.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <p>You will receive a confirmation email from our registrar within 24 hours after registering. 
+            The confirmation email will have additional instructions on how to sign up for games.</p>
+            <p>If you do not receive a confirmation email within 24 hours please contact us at intrigue@hazardgaming.com.</p>
+        </div>
+    </div>
+    <br><br>
 </div>
 @endsection
 
