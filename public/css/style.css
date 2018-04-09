@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Aniron;
+  src: url('/fonts/aniron.regular.ttf');
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
@@ -76,7 +81,7 @@ div.col-xs-12.col-sm-6.responsive-align{
   font-family: 'Raleway', sans-serif;
   margin-bottom: 0px;
   /*background: url(/img/lil_nap.png) right bottom no-repeat, url(/img/paper_texture_02.jpg) no-repeat ;*/
-  box-shadow: inset 0px 0px 600px rgba(0, 0, 0, 0.80);
+  box-shadow: inset 0px 0px 300px rgba(0, 0, 0, 0.20);
   background-size: cover;
   color: white;
   text-shadow: black 0.1em 0.1em 0.1em;
@@ -90,7 +95,18 @@ div.col-xs-12.col-sm-6.responsive-align{
 
 .spring {
   background:  url(/img/spring_bg.jpg) no-repeat ;
-  background-position:50%40%;
+  background-position:50%75%;
+}
+
+.aniron {
+  font-family: Aniron;
+  color: #88c655;
+}
+.aniron_sm {
+  font-size: .3em;
+}
+.aniron_lrg {
+  font-size: .7em;
 }
 
 .roundup {
