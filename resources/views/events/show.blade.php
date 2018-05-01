@@ -120,7 +120,7 @@
                     @endif
                     <div class="pull-right"><a href="/games" class="btn btn-primary">Games List</a></div>
                     </h4><hr>
-                     @if($featuredgame !== 0)
+                     @if($featuredgame)
                          <h5>Featured</h5>                                                             
                         <div class="media">
                             <a href="/games/{{$featuredgame->id}}" class="list-group-item list-group-item-action">
