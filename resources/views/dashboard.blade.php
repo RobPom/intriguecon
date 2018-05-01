@@ -5,6 +5,7 @@
 <h1>Dashboard - {{Auth::user()->name}}</h1>
 <div class="container">
     @if (Auth::user()->admin)
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
@@ -28,11 +29,18 @@
                                                 {{count($timeslot->games)}} Games
                                             </div>
                                             <div class='col-sm-4'>
-                                                <?php $counter = 0; ?>
+                                                <?php $totalSeats = 0; ?>
                                                 @foreach($timeslot->games as $game)
-                                                    <?php $counter += $game->max; ?>
+                                                    <?php 
+                                                    
+                                                        $gametimeslot = App\GameTimeslot::where('timeslot_id', $timeslot->id)
+                                                            ->where('game_id', $game->id)
+                                                            ->first();
+                                                        $playerCount = count($gametimeslot->attendees);
+                                                        $totalSeats += $game->max; 
+                                                    ?>
                                                 @endforeach
-                                                <i class='material-icons' >event_seat</i> {{$counter}}
+                                                <i class='material-icons' >event_seat</i> {{$playerCount}} / {{$totalSeats}}
                                             </div>
                                         </div>
                                     </a>
