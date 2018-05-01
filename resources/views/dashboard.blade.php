@@ -29,14 +29,14 @@
                                                 {{count($timeslot->games)}} Games
                                             </div>
                                             <div class='col-sm-4'>
-                                                <?php $totalSeats = 0; ?>
+                                                <?php $totalSeats = 0; $playerCount = 0; ?>
                                                 @foreach($timeslot->games as $game)
                                                     <?php 
                                                     
                                                         $gametimeslot = App\GameTimeslot::where('timeslot_id', $timeslot->id)
                                                             ->where('game_id', $game->id)
                                                             ->first();
-                                                        $playerCount = count($gametimeslot->attendees);
+                                                        $playerCount += count($gametimeslot->attendees);
                                                         $totalSeats += $game->max; 
                                                     ?>
                                                 @endforeach
