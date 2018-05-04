@@ -16,14 +16,11 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <h3>Regular Attendance</h3>
-            <p><em>Only $20 for both days!</em></p>
-            <p>Select the number of Attendees from the dropdown, then click "Pay with PayPal". </p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <br>
+            <h3>Online registration is now closed</h3>
+
+            <p>A few spots are still open and <em>may</em> be available for purchase at the door!</p>
+                <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                     <input type="hidden" name="cmd" value="_s-xclick">
                     <input type="hidden" name="hosted_button_id" value="X8M7M5HNKNFKY">
                     <table>
@@ -38,10 +35,10 @@
                     <input type="image" src="img/paypal.jpg" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
                 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" hidden="" style="display: none !important;">
                     </form>
-
+ -->
         </div>
     </div>
-    <hr>
+    <!-- <hr>
     <div class="row">
         <div class="col-xs-12">
             <h3>Children's Session</h3>
@@ -67,7 +64,7 @@
             <p>If you do not receive a confirmation email within 24 hours please contact us at intrigue@hazardgaming.com.</p>
         </div>
     </div>
-    <br><br>
+    <br><br> -->
 </div>
 @endsection
 
