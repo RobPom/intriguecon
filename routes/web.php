@@ -24,6 +24,10 @@ Route::get('/swapmeet', 'PagesController@swapmeet');
 Route::get('/2017-recap', 'PagesController@recap');
 Route::get('/2017-gallery', 'PagesController@gallery');
 
+Route::get('/test', function(){
+    return view('pages.test');
+});
+
 
 Route::get('/game/{id}/attendance', 'GamesController@attendance');
 

@@ -2,7 +2,27 @@
 
 @section('content')
 
-<div class="item jumbotron center spring" style="text-align: center;">
+<div class="item jumbotron fall">
+        <row>
+            <div class='col-sm-6'>
+                <div class="quote-font text-center" >
+                    ... for when you gaze long into the abyss. The abyss gazes also into you.  
+    
+                </div>
+            </div>
+            <div class='col-sm-3'><br></div>
+            <div class='col-sm-3 text-center '>
+                <div class="logo">
+                    Intrigue<span class='con'>Con</span>
+                </div>
+                <div class="date">
+                    Oct 12 - 14, 2018
+                </div>
+            </div>
+        </row>
+    </div>
+
+<!-- <div class="item jumbotron center spring" style="text-align: center;">
     <h1 class="display-3" >
         <span class='aniron aniron_sm'>The</span><br>
         <span class='aniron aniron_lrg'>Fellowship</span><br>
@@ -26,7 +46,7 @@
             </p>
         </div>
     </div>
-</div>
+</div> -->
 
     <div class="row" style="margin-top:20px;">
         <div class="col-sm-12">
@@ -207,7 +227,7 @@
        
 
     </div>
-
+<!-- 
     <hr class="hidden-xs">
     <div class="row" style="margin-bottom:60px;">
         <div class="col-sm-12">
@@ -233,7 +253,7 @@
             </div>
         </div>
     </div>
-
+ -->
 @endsection
 
 <style>
