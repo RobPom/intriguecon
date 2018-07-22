@@ -24,7 +24,7 @@
                         <br>
                         <h3>You are now registered </h3>
         
-                    <p>You will receive a confirmation email from our registrar within 24 hours. If you do not receive a confirmation email within 24 hours  please contact us at intrigue@hazardgaming.com.</p>
+                    <p>You will receive a confirmation email from our registrar within 24 hours. If you do not receive a confirmation email within 24 hours  please contact us at intrigueregistrar@gmail.com.</p>
                     <p>We'll send you an email when the games are on the scheduled, then you'll be ready to sign up for games.</p>
                     <br>
                     <h4>GameMasters</h4>
