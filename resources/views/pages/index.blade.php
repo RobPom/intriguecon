@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="item jumbotron fall">
-        <row>
+        <div class='row'>
             <div class='col-sm-6'>
                 <div class="quote-font text-center" >
                     ... for when you gaze long into the abyss. The abyss gazes also into you.  
@@ -19,7 +19,11 @@
                     Oct 12 - 14, 2018
                 </div>
             </div>
-        </row>
+        </div>
+        <br>
+        <div class='row text-center'>
+            <a href="/reserve" class="btn btn-info btn-sm" style="background-color: #2c6459 ; border-color: #642c37">Early Registration Open!</a>
+        </div>
     </div>
 
 <!-- <div class="item jumbotron center spring" style="text-align: center;">

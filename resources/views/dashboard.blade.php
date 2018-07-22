@@ -12,7 +12,7 @@
                     <div class="panel-heading">
                         <h4>Admin</h4>
                     </div>
-                    <div class="panel-body">
+                   <!--  <div class="panel-body">
                         <h5>{{$event->title}} | {{count($attendees)}} attendees</h5>
                         <a href='/attendees'>View All</a>
                         <hr>
@@ -49,7 +49,7 @@
                             @endforeach
                    
                         <a class='btn btn-large btn-primary pull-right' href="/schedule/manage/{{Config::get('constants.active_con')}}">Manage Schedule</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

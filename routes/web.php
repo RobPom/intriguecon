@@ -24,9 +24,11 @@ Route::get('/swapmeet', 'PagesController@swapmeet');
 Route::get('/2017-recap', 'PagesController@recap');
 Route::get('/2017-gallery', 'PagesController@gallery');
 
-Route::get('/test', function(){
+Route::get('/submit-game', 'PagesController@submitGame');
+
+/* Route::get('/test', function(){
     return view('pages.test');
-});
+}); */
 
 
 Route::get('/game/{id}/attendance', 'GamesController@attendance');
@@ -49,7 +51,7 @@ Route::delete('/calendar/manage/{id}', 'DaysController@destroy');
 Route::post('/proposal/add', 'GameProposalsController@store');
 Route::get('/proposals/submitted', 'GameProposalsController@submitted');
 Route::get('/proposals/{id}/edit', 'GameProposalsController@edit');
-Route::post('/proposals/insert', 'GameProposalsController@insert');
+Route::put('/proposals/{id}', 'GameProposalsController@update');
 Route::delete('/proposals/{id}', 'GameProposalsController@destroy');
 
 Route::get('/timeslots/manage/{id}', 'TimeslotsController@create');

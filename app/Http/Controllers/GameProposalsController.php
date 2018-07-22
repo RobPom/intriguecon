@@ -63,7 +63,7 @@ class GameProposalsController extends Controller
         return view('proposals.edit')->with('proposal', $proposal);
     }
     
-    public function insert(Request $request)
+    public function update(Request $request, $id)
     {
         $this->validate($request, [
             'title' => 'required',
@@ -79,11 +79,11 @@ class GameProposalsController extends Controller
             'email' => 'required'
         ]);
 
-        //create game proposal
-        $game = new Game();
-        
-        $game->gamemaster = $request->input('name');
-        $game->name = $request->input('title');
+
+        $game = GameProposal::find($id);
+
+        $game->title = $request->input('title');
+        $game->name = $request->input('name');
         $game->tagline = $request->input('tagline');
         $game->system = $request->input('system');
         $game->short_description = $request->input('short_description');
@@ -91,15 +91,9 @@ class GameProposalsController extends Controller
         $game->advisory = $request->input('advisory');
         $game->min = $request->input('min');
         $game->max = $request->input('max');
-        $game->created_by = auth()->user()->id;
-        $game->edited_by = 0;
-        $game->game_image = 'noImage.jpg';
         $game->save();
 
-        $proposal = GameProposal::find($request->input('id'));
-        $proposal->delete();
-
-        return redirect('/games/'. $game->id)->with('success', 'game submitted')->with('game' , $game);;
+        return redirect('/dashboard')->with('success', 'game updated');
 
     }
 

@@ -25,6 +25,10 @@ class PagesController extends Controller
        return view('pages.volunteer');
     }
 
+    public function submitGame(){
+        return view('pages.submit-game');
+     }
+
     public function code_of_conduct(){
         return view('pages.code-of-conduct');
     }
