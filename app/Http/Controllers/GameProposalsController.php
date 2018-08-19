@@ -21,14 +21,14 @@ class GameProposalsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required',
-            'tagline' => 'required',
-            'system' => 'required',
-            'description' => 'required',
+            'title' => 'required|max:70',
+            'tagline' => 'required|max:140',
+            'system' => 'required|max:140',
+            'description' => 'required|max:1000',
             'min' => 'required',
             'max' => 'required',
-            'name' => 'required',
-            'email' => 'required'
+            'name' => 'required|max:70',
+            'email' => 'required|email'
         ]);
 
         //create game proposal

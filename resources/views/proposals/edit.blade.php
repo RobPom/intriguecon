@@ -10,7 +10,7 @@
                 {!! Form::open(['action' => ['GameProposalsController@update' , $proposal->id] , 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                     <div class="form-group">
                         {{Form::Label('title', 'Title')}}
-                        {{Form::text('title', $proposal->title, ['class' => 'form-control', 'placeholder' => 'Enter the name of the game'])}}
+                        {{Form::text('title', $proposal->title, ['class' => 'form-control', 'placeholder' => 'Enter the name of the game' , 'maxlength' => '20'])}}
                     </div>
                     <div class="row form-group">
                         <div class="col-lg-6 col-sm-6 col-xs-12">

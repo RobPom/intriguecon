@@ -24,7 +24,7 @@
                 {!! Form::open(['action' => 'GameProposalsController@store' , 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                     <div class="form-group">
                         {{Form::Label('title', 'Title')}}
-                        {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Enter the name of the game'])}}
+                        {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'is this even the right fucking form?'])}}
                     </div>
                     <div class="row form-group">
                         <div class="col-lg-6 col-sm-6 col-xs-12">
