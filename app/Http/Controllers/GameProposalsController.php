@@ -21,10 +21,11 @@ class GameProposalsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'title' => 'required|max:70',
+            'title' => 'required|max:60',
             'tagline' => 'required|max:140',
             'system' => 'required|max:140',
             'description' => 'required|max:1000',
+            'short_description' => 'required|max:190',
             'min' => 'required',
             'max' => 'required',
             'name' => 'required|max:70',
